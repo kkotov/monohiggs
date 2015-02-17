@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Comparing monohiggs and monojet signatures from the arXiv:1312.2592 model</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Comparing monohiggs and monojet signatures from the arXiv:1312.2592 model">
+  <meta name="author" content="Khristian Kotov">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="../libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="../libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="../libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="../libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="../libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="../libraries/frameworks/io2012/js/slides" 
+    src="../libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Comparing monohiggs and monojet signatures from the arXiv:1312.2592 model</h1>
+    <h2></h2>
+    <p>Khristian Kotov<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Questions on the benchmark model</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The model in <a href="http://arxiv.org/abs/1312.2592">1312.2592</a> gives monohiggs and monojet signatures</p>
+
+<p>Is this model already ruled out by the monojet search?</p>
+
+<p>Is it better to be interpreted within the monojet search?</p>
+
+<p>What are the model parameter values that need to be investigated?  </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Production rates</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>We focus on the <em>scalar mediator</em> model and use following parameters:</p>
+
+<ol>
+<li>dark matter candidate mass: \(m_{\chi} = 1~GeV\)</li>
+<li>new scalar mediator mass: \(m_{sc} = 100~GeV\)</li>
+<li>higgs-scalar mixing angle: \(sin(\theta) = 0.3\)</li>
+</ol>
+
+<p>These values (taken from the paper) seem to maximize the signal production rate</p>
+
+<p>The Madgraph&#39;s cross section for the two signatures:</p>
+
+<p>Monojet: \(\sigma(pp~ >~ chi~ chi\tilde~ ) = 350~pb\)</p>
+
+<p>Monohiggs: \(\sigma(pp~ >~ h~ chi~ chi\tilde~ ) = 0.13~pb\)</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Results from full simulation in CMSSW_7_2_0_pre8</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The \(E_{T}^{miss}\) is the key observable to probe for the &quot;invisible&quot; part of the event</p>
+
+<p>For the monojet signature I choose events containing a parton with \(p_{T} > 200 GeV\)</p>
+
+<p>So the \(E_{T}^{miss}\) spectrum looks as follows:</p>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p><img class=center src=hcc_met.svg height=350> </p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img class=center src=cc_met.svg height=350></p>
+
+</div>
+<div>
+  
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>\(E_{T}^{miss}\) selection</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Monojet analysis relies on \(E_{T}^{miss}\) cut (or alternatively \(p_{T}\) of the jet)</p>
+
+<p>Monohiggs search can go for a lower \(E_{T}^{miss}\) as there is an additional Higgs boson selection</p>
+
+<p></br></br></p>
+
+<table><thead>
+<tr>
+<th>signature</th>
+<th>production rate</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>monojet</td>
+<td>\(\sigma \times \epsilon(E_{T}^{miss} > 500~GeV) = 0.35~pb\)</td>
+</tr>
+<tr>
+<td>monohiggs</td>
+<td>\(\sigma \times \epsilon(E_{T}^{miss} > 100~GeV) = 0.04~pb\)</td>
+</tr>
+</tbody></table>
+
+<p></br></br></p>
+
+<p>Although the choice of optimal cuts depends on the background (that I don&#39;t have),
+the monojet signature may still have ~10 times higher rate</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Questions on the benchmark model'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Production rates'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Results from full simulation in CMSSW_7_2_0_pre8'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='\(E_{T}^{miss}\) selection'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script> -->
+  <script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="../libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="../libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>

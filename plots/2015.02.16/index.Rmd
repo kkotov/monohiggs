@@ -1,0 +1,86 @@
+---
+title       : "Comparing monohiggs and monojet signatures from the arXiv:1312.2592 model"
+subtitle    : 
+author      : Khristian Kotov
+job         : 
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+url:
+  lib:    ../libraries
+  assets: ../assets
+widgets     : [mathjax]     # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+---
+
+## Questions on the benchmark model
+
+The model in [1312.2592](http://arxiv.org/abs/1312.2592) gives monohiggs and monojet signatures
+
+Is this model already ruled out by the monojet search?
+
+Is it better to be interpreted within the monojet search?
+
+What are the model parameter values that need to be investigated?  
+
+***
+
+I use the original model that was shared by the authors 
+
+--- .class #id
+
+## Production rates
+
+We focus on the _scalar mediator_ model and use following parameters:
+
+1. dark matter candidate mass: $m_{\chi} = 1~GeV$
+2. new scalar mediator mass: $m_{sc} = 100~GeV$
+3. higgs-scalar mixing angle: $sin(\theta) = 0.3$
+
+These values (taken from the paper) seem to maximize the signal production rate
+
+The Madgraph's cross section for the two signatures:
+
+Monojet: $\sigma(pp~ >~ chi~ chi\tilde~ ) = 350~pb$
+
+Monohiggs: $\sigma(pp~ >~ h~ chi~ chi\tilde~ ) = 0.13~pb$
+
+--- &twocol
+
+## Results from full simulation in CMSSW_7_2_0_pre8
+
+The $E_{T}^{miss}$ is the key observable to probe for the "invisible" part of the event
+
+For the monojet signature I choose events containing a parton with $p_{T} > 200 GeV$
+
+So the $E_{T}^{miss}$ spectrum looks as follows:
+
+*** =left
+
+<img class=center src=hcc_met.svg height=350> 
+
+*** =right
+
+<img class=center src=cc_met.svg height=350>
+
+*** =fullwidth
+
+--- .class #id
+
+## $E_{T}^{miss}$ selection
+
+Monojet analysis relies on $E_{T}^{miss}$ cut (or alternatively $p_{T}$ of the jet)
+
+Monohiggs search can go for a lower $E_{T}^{miss}$ as there is an additional Higgs boson selection
+
+</br></br>
+
+signature  | production rate
+-----------|------------------------------------------------------------
+monojet    | $\sigma \times \epsilon(E_{T}^{miss} > 500~GeV) = 0.35~pb$
+monohiggs  | $\sigma \times \epsilon(E_{T}^{miss} > 100~GeV) = 0.04~pb$
+
+</br></br>
+
+Although the choice of optimal cuts depends on the background (that I don't have),
+the monojet signature may still have ~10 times higher rate
