@@ -8,7 +8,7 @@ highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
 github:
   user: kkotov 
-  repo: talks/2015.02.16
+  repo: talks
 url:
   lib:    ../libraries
   assets: ../assets
