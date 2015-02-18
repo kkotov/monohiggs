@@ -75,10 +75,10 @@ Monohiggs search can go for a lower $E_{T}^{miss}$ as there is an additional Hig
 
 </br></br>
 
-signature  | production rate
------------|------------------------------------------------------------
-monojet    | $\sigma \times \epsilon(E_{T}^{miss} > 500~GeV) = 0.35~pb$
-monohiggs  | $\sigma \times \epsilon(E_{T}^{miss} > 100~GeV) = 0.04~pb$
+signature  | production rate                                            | current limit
+-----------|------------------------------------------------------------|--------------
+monojet    | $\sigma \times \epsilon(E_{T}^{miss} > 500~GeV) = 0.35~pb$ | [$0.01~pb$](http://arxiv.org/pdf/1408.3583v1.pdf#10)
+monohiggs  | $\sigma \times \epsilon(E_{T}^{miss} > 100~GeV) = 0.04~pb$ | N/A
 
 </br></br>
 
