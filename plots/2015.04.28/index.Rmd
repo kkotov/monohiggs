@@ -1,7 +1,7 @@
 ---
-title       : "Mono-higgs overview"
+title       : "Mono-higgs"
 subtitle    : 
-author      : Khristian Kotov
+author      : Khristian Kotov, Michele De Gruttola
 job         : 
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
@@ -24,7 +24,7 @@ knit        : slidify::knit2slides
 
 Experimentalist's view:
 
- * Higgs boson is the least studied SM object that may show us an interesting behaviour
+ * Higgs boson is the least studied SM object that may show us an interesting behavior
  * The $VH$ SM process has still [not yet been reliably observed](http://dx.doi.org/10.1103/PhysRevD.89.012003) (only $\sim 2 \sigma$ excess seen)
  * The mono-$X$ signatures is a general approach to look for the Dark Matter at colliders
 
@@ -71,7 +71,7 @@ And an additional interaction terms (where $sin(\theta) \equiv s_\theta = 2 a v 
 The important physics phenomena come from the $H-S$ mixing alone:
  * Mixing opens direct invisible Higgs boson decay channel (if $m_H > 2 m_\chi$)
   * it should be consistent with direct [($\mathcal{B} < 0.6$)](http://dx.doi.org/10.1140/epjc/s10052-014-2980-6)
-and inderect [($\mathcal{B}<0.38$)](http://dx.doi.org/10.1016/j.physletb.2014.06.077) bounds
+and indirect [($\mathcal{B}<0.38$)](http://dx.doi.org/10.1016/j.physletb.2014.06.077) bounds
   * it allows for the invisible $H$ + ISR jet (mono-jet) signature that is also rather [constrained](http://arxiv.org/pdf/1408.3583v1.pdf#10)
  * Mixing generates Yukawa couplings for $S$ and SM quarks thus giving us di-jet signature
   * the current [di-jet limits](http://dx.doi.org/10.1103/PhysRevD.91.052009) also apply
@@ -80,7 +80,7 @@ and inderect [($\mathcal{B}<0.38$)](http://dx.doi.org/10.1016/j.physletb.2014.06
 
 The interaction potential $V^{cubic}$ also generates invisible $H$ and mono-$H$ signatures
 
-The mono-$H$ contribution gains significance when $~m_H < 2 m_\chi~$, but $~2 m_\chi < m_S~$
+The mono-$H$ contribution of $V^{cubic}$ gains significance when $~m_H < 2 m_\chi~$, but $~2 m_\chi < m_S~$
 
 --- .class #id
 
@@ -206,11 +206,11 @@ p2$show('inline')
 
 
 
-## Phenomenological summary for "new scalar" model
+## Phenomenological summary for the scalar model
 
 The production cross section of the mono-higgs and mono-jet processes:
  * $\sigma_{mono-X} \sim sin^2(\theta) \cdot y^2_\chi$
- * $\sigma_{mono-X} \sim (1 - 4 m^2_\chi / M^2_{mediator} )$ for phase spase
+ * $\sigma_{mono-X} \sim (1 - 4 m^2_\chi / M^2_{mediator} )$ for phase space
 
 The event kinematics of the mono-higgs and mono-jet processes:
  * $m_\chi < \frac{m_h}{2}$: independent of any model parameter
@@ -269,15 +269,15 @@ We have the [Phys14](https://github.com/arizzi/cmssw/blob/vhbbHeppy722patch2/VHb
 Inspired by the [$VH$](http://dx.doi.org/10.1103/PhysRevD.89.012003) analysis:
 
  * $E_{T}^{miss} > 150~GeV$
- * Higgs jets: $p_{T} > 80, 30~GeV$, with tight and mediun CSV tags (0.898, 0.679 discriminators)
+ * Higgs jets: $p_{T} > 80, 30~GeV$, with tight and medium CSV tags (0.898, 0.679 discriminators)
  * no isolated leptons with $p_T > 20~GeV$
  * $dR(bb)<1.3$ selects relatively boosted $H$
- * $|d\phi(E_{T}^{miss},\forall Jet)| < 1.5$ supresses QCD
+ * $|d\phi(E_{T}^{miss},\forall Jet)| < 1.5$ suppresses QCD
  * no more that one additional jet with $p_{T} > 30~GeV$ and $|\eta| < 2.4$
 
 $H \rightarrow bb$ reconstruction options:
  * jet pair with highest $p_T$
- * jet pair with highest $b$-tag discriminants 
+ * jet pair with highest $b$-tag discriminators 
 
 
 --- &twocol
@@ -311,53 +311,53 @@ A reasonable mass cut around $\sim 90-140~GeV$ can suppress backgrounds by facto
 
 *** =fullwidth
 
-A very similar performance as for the highest di-jet $p_T$ selection in previous slide
+Not much difference wrt. the previous slide $\rightarrow$ use highest di-jet $p_T$ selection by default
 
 
 
 --- &twocol
 
-## $E^{miss}_T$ distributions
+## $E^{miss}_T$ and $p^{higgs}_T$ distributions
 
 *** =left
-
-Highest $p_T$ jet pair:
 
 <img class=center src="metAllSelWide.svg" height=450>
 
 *** =right
 
-Highest $b$-tags jet pair:
-
-<img class=center src="metCAllSelWide.svg" height=450>
+<img class=center src="hptAllSelWide.svg" height=450>
 
 *** =fullwidth
 
+Main backgrounds are TTBar, ZJets, and WJets; signal yeild is 20-30% of Z(nn)H
+
 --- &twocol
 
-## Descrimination power
+## Discriminating power
 
 *** =left
-
-Highest $p_T$ jet pair:
 
 <img class=center src="_allVSsig.svg" height=450>
 
 *** =right
 
-Highest $b$-tags jet pair:
-
-<img class=center src="_allCVSsig.svg" height=450>
+<img class=center src="ptAllVSsig.svg" height=450>
 
 *** =fullwidth
 
-It marginally looks like signal is slightly harder than the backgrounds
+Signal is slightly harder than the backgrounds
 
 --- .class #id
 
 
 ## Summary
 
- * This is a toy study, the most of the work will be in 
+Theory-wise mono-higgs scalar model seems to be a well-motivated scenario:
+ * it is a renormalizable way to extend the SM
+ * it couples DM with Higgs boson
 
+Analysis-wise the model seem a pretty challenging enterprise:
+ * signal yield is minuscule (20-30% of irreducible Z(nn)H that is not yet observed)
+ * kinematic spectra do not offer a very good discrimination
+ * the backgrounds have to be measured directly from data
 
