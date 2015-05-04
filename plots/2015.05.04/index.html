@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mono-higgs</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Mono-higgs">
+  <meta name="author" content="Khristian Kotov, Michele De Gruttola">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="../libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="../libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="./slidify.css" >
+  <link rel="stylesheet" href="../libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="../libraries/widgets/nvd3/css/nv.d3.css"></link>
+<link rel=stylesheet href="../libraries/widgets/nvd3/css/rNVD3.css"></link>
+
+  
+<script src="../libraries/widgets/polycharts/js/polychart2.standalone.js"></script>
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="../libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="../libraries/frameworks/io2012/js/slides" 
+    src="../libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  <script src="../libraries/widgets/nvd3/js/jquery-1.8.2.min.js"></script>
+<script src="../libraries/widgets/nvd3/js/d3.v3.min.js"></script>
+<script src="../libraries/widgets/nvd3/js/nv.d3.min-new.js"></script>
+<script src="../libraries/widgets/nvd3/js/fisheye.js"></script>
+
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Mono-higgs</h1>
+    <h2></h2>
+    <p>Khristian Kotov, Michele De Gruttola<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Motivation for the mono-higgs search</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><br></p>
+
+<p>Experimentalist&#39;s view:</p>
+
+<ul>
+<li>Higgs boson is the least studied SM object that may show us an interesting behavior</li>
+<li>The \(VH\) SM process has still <a href="http://dx.doi.org/10.1103/PhysRevD.89.012003">not yet been reliably observed</a> (only \(\sim 2 \sigma\) excess seen)</li>
+<li>The mono-\(X\) signatures is a general approach to look for the Dark Matter at colliders</li>
+</ul>
+
+<p><br></p>
+
+<p>Theorist&#39;s view (in my view):</p>
+
+<ul>
+<li>Corrections to Higgs boson mass can be canceled by yet unknown (invisible) particles</li>
+<li>Higgs is perfect &quot;hook&quot; to introduce new fields with <a href="http://arxiv.org/pdf/hep-ph/0605188v1.pdf">renormalizable couplings</a> to SM
+[<a href="https://indico.cern.ch/event/349613/session/9/contribution/5/material/slides/0.pdf">1</a>, 
+<a href="http://arxiv.org/pdf/hep-ph/0612275v2.pdf">2</a>, <a href="http://en.wikipedia.org/wiki/Two-Higgs-doublet_model">3</a>]</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Scalar model of the <a href="http://arxiv.org/abs/1312.2592">1312.2592</a></h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Introduce Dark Matter \(\chi\) coupled to a new scalar singlet \(S\):</p>
+
+<p>\[ \mathcal{L} \sim -y_\chi \bar{\chi}\chi S \]</p>
+
+<p>\(S\) can be introduced to the SM at the renormalizable level via interaction with the Higgs boson:</p>
+
+<p>\[ V \sim a |H|^2 S + b |H|^2 S^2 + \lambda_h |H|^4 = \frac{1}{2} a (h + v)^2 S + \frac{1}{2} b (h + v)^2 S^2 + \frac{\lambda_h}{4}(h+v)^4 \]</p>
+
+<p>Diagonalizing mass matrix via mixing \(~~h \rightarrow c_\theta h + s_\theta S~~\)  and  \(~~S \rightarrow c_\theta S - s_\theta h~~\)  gives us:</p>
+
+<p>\[ \mathcal{L} \sim -y_\chi \bar{\color{red}\chi}\color{red}\chi (c_\theta S - s_\theta \color{red}h) - \frac{m_q}{v}\bar{\color{brown}q}\color{brown}q(c_\theta h + s_\theta \color{brown}S) \]
+(note: we now have <span style="color:red">invisible higgs decay</span> and <span style="color:brown">Yukawa coupling of \(S\) to SM</span>, suppressed by \(s_\theta\))</p>
+
+<p>And an additional interaction terms (where \(sin(\theta) \equiv s_\theta = 2 a v /(m^2_S - m^2_h)\)):</p>
+
+<p>\[ V^{cubic} \approx \frac{sin(\theta)}{v} (2 m^2_h + m^2_S) h^2 S + \frac{m^2_S}{v} h S^2 + ... \]</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Observations on the model</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><br></p>
+
+<p>The important physics phenomena come from the \(H-S\) mixing alone:</p>
+
+<ul>
+<li>Mixing opens direct invisible Higgs boson decay channel (if \(m_H > 2 m_\chi\))
+
+<ul>
+<li>it should be consistent with direct <a href="http://dx.doi.org/10.1140/epjc/s10052-014-2980-6">(\(\mathcal{B} < 0.6\))</a>
+and indirect <a href="http://dx.doi.org/10.1016/j.physletb.2014.06.077">(\(\mathcal{B}<0.38\))</a> bounds</li>
+<li>it allows for the invisible \(H\) + ISR jet (mono-jet) signature that is also rather <a href="http://arxiv.org/pdf/1408.3583v1.pdf#10">constrained</a></li>
+</ul></li>
+<li>Mixing generates Yukawa couplings for \(S\) and SM quarks thus giving us di-jet signature
+
+<ul>
+<li>the current <a href="http://dx.doi.org/10.1103/PhysRevD.91.052009">di-jet limits</a> also apply</li>
+</ul></li>
+</ul>
+
+<p><br></p>
+
+<p>The interaction potential \(V^{cubic}\) also generates invisible \(H\) and mono-\(H\) signatures</p>
+
+<p>The mono-\(H\) contribution of \(V^{cubic}\) gains significance when \(~m_H < 2 m_\chi~\), but \(~2 m_\chi < m_S~\)</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>The model parameters</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Let us start with the parameters from the original paper:</p>
+
+<ol>
+<li>Dark matter candidate mass: \(m_\chi = 1~GeV - 100~GeV\)</li>
+<li>New scalar mediator mass: \(m_S = 100~GeV~(1000~GeV)\)</li>
+<li>Higgs-scalar mixing angle: \(sin(\theta) = 0.3~\) (still consistent with the current Higgs data)</li>
+<li>Higgs-scalar Yukawa coupling to DM: \(y_\chi = 0.5\)</li>
+</ol>
+
+<p>Parameters from 3 and 4 are trivial:</p>
+
+<ul>
+<li><p>cross section is proportional to \(sin^2(\theta)\) and \(y_{\chi}^2\)</p></li>
+<li><p>these parameters do not change kinematics</p></li>
+</ul>
+
+<p>Mono-higgs cross section: \(\sigma(pp > h~ chi~ chi\tilde~ ) = 0.126~pb\)</p>
+
+<p>Invisible cross section: \(\sigma(pp~ >~ chi~ chi\tilde~ ) = 350~pb~\)</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>Mono-higgs diagrams and exclusive cross sections</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <p><img class=center src=../2015.04.07/d2.png height=200> </p>
+
+<p>\[ \small \sigma(pp > h > h~ chi~ chi\tilde~ / chi~ chi\tilde~~ sc ) \sim 10^{-1}~pb \]</p>
+
+<p><img class=center src=../2015.04.07/d4.png height=200></p>
+
+<p>\[ \small \sigma(pp > h~ chi~ chi\tilde~~ HIG=2) \sim 10^{-4}~pb \]</p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img class=center src=../2015.04.07/d3.png height=200></p>
+
+<p>\[ \small \sigma(pp > sc > h~ chi~ chi\tilde~ ) \sim 10^{-3}~pb \]</p>
+
+<p><img class=center src=../2015.04.07/d1.png height=200> </p>
+
+<p>\[ \small \sigma(pp > chi > h~ chi~ chi\tilde~ ) \sim 10^{-8}~pb \]</p>
+
+</div>
+<div style='float:right;width:100%;'>
+  
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>Mono-higgs production cross section</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The top two diagrams from the previous slide are relevant for the two kinematic regions:</p>
+
+<!-- * $m_\chi > max\{ \frac{m_h}{2}, \frac{m_S}{2} \}$: kinematically suppressed, not considering further -->
+
+<div style='float:left;width:48%;' class='centered'>
+  <ul>
+<li>\(m_\chi < \frac{m_h}{2}\): leading contribution comes from the diagram with \(h \rightarrow \bar{\chi}\chi~\) (\(\forall~m_S\))</li>
+</ul>
+
+<div id = 'chart1eed15a9be90' class = 'rChart polycharts'></div>
+
+<script type='text/javascript'>
+    var chartParams = {
+ "dom": "chart1eed15a9be90",
+"width":    450,
+"height":    350,
+"layers": [
+ {
+ "x": "mass",
+"y": "rate",
+"data": {
+ "mass": [      1,     10,     20,     30,     40,     50,     60 ],
+"rate": [  0.126,  0.122,  0.108,  0.085,  0.057,  0.027,  0.003 ] 
+},
+"facet": null,
+"type": "point" 
+} 
+],
+"facet": [],
+"guides": {
+ "x": {
+ "min":      0,
+"max":     65,
+"numticks": 7,
+"labels": [      1,     10,     20,     30,     40,     50,     60 ],
+"title": "m_chi (GeV)" 
+},
+"y": {
+ "min": -0.001,
+"max":   0.13 
+} 
+},
+"coord": [],
+"title": "Cross section (pb)",
+"id": "chart1eed15a9be90" 
+}
+    _.each(chartParams.layers, function(el){
+        el.data = polyjs.data(el.data)
+    })
+    var graph_chart1eed15a9be90 = polyjs.chart(chartParams);
+</script>
+
+</div>
+<div style='float:right;width:48%;'>
+  <ul>
+<li>\(\frac{m_h}{2} < m_\chi < \frac{m_S}{2}\): leading contribution is due to \(S \rightarrow \bar{\chi}\chi\) (assume \(m_S = 1~TeV\))</li>
+</ul>
+
+<div id = 'chart1eeda0c147e' class = 'rChart polycharts'></div>
+
+<script type='text/javascript'>
+    var chartParams = {
+ "dom": "chart1eeda0c147e",
+"width":    450,
+"height":    350,
+"layers": [
+ {
+ "x": "mass",
+"y": "rate",
+"data": {
+ "mass": [     70,     80,     90,    100,    200,    300,    400 ],
+"rate": [ 0.00149, 0.00148, 0.00146, 0.00144, 0.00118, 0.00078, 0.00033 ] 
+},
+"facet": null,
+"type": "point" 
+} 
+],
+"facet": [],
+"guides": {
+ "x": {
+ "min":     60,
+"max":    410,
+"numticks": 7,
+"labels": [      1,     10,     20,     30,     40,     50,     60 ],
+"title": "m_chi (GeV)" 
+},
+"y": {
+ "min": 0.0003,
+"max": 0.00155 
+} 
+},
+"coord": [],
+"title": "Cross section (pb)",
+"id": "chart1eeda0c147e" 
+}
+    _.each(chartParams.layers, function(el){
+        el.data = polyjs.data(el.data)
+    })
+    var graph_chart1eeda0c147e = polyjs.chart(chartParams);
+</script>
+
+</div>
+<div style='float:right;width:100%;'>
+  
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Phenomenological summary for the scalar model</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The production cross section of the mono-higgs and mono-jet processes:</p>
+
+<ul>
+<li>\(\sigma_{mono-X} \sim sin^2(\theta) \cdot y^2_\chi\)</li>
+<li>\(\sigma_{mono-X} \sim (1 - 4 m^2_\chi / M^2_{mediator} )\) for phase space</li>
+</ul>
+
+<p>The event kinematics of the mono-higgs and mono-jet processes:</p>
+
+<ul>
+<li>\(m_\chi < \frac{m_h}{2}\): independent of any model parameter</li>
+<li>\(\frac{m_h}{2} < m_\chi < \frac{m_S}{2}\): depends on \(~m_S~\)</li>
+</ul>
+
+<p>Mono-jet event signature offers more power to constrain the model compared to mono-higgs:</p>
+
+<table><thead>
+<tr>
+<th>signature</th>
+<th>production rate</th>
+<th>current limit</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>mono-jet</td>
+<td>\(\sigma \times \epsilon(E_{T}^{miss} > 500~GeV) = 0.35~pb\)</td>
+<td><a href="http://arxiv.org/pdf/1408.3583v1.pdf#10">\(0.01~pb\)</a></td>
+</tr>
+<tr>
+<td>mono-higgs</td>
+<td>\(\sigma \times \epsilon(E_{T}^{miss} > 100~GeV) = 0.04~pb\)</td>
+<td>N/A</td>
+</tr>
+</tbody></table>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Mono-higgs analysis strategy</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><br></p>
+
+<p>Event signature: \(E^{miss}_T + H(\rightarrow b\bar{b})\)</p>
+
+<ul>
+<li>select events with \(E^{miss}_T\) and two \(b\)-jets (at least)</li>
+<li>reconstruct \(H\) peak</li>
+</ul>
+
+<p>Main backgrounds: QCD, TTBar, WJets, ZJets, ZH (irreducible)</p>
+
+<ul>
+<li>model TTBar with Monte Carlo</li>
+<li>measure VJets, QCD(?), and ZH from data</li>
+</ul>
+
+<p>Limit setting</p>
+
+<ul>
+<li>look for excess over the SM ZH background</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Signal and backgrounds in full simulation</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><br></p>
+
+<p>We have the <a href="https://github.com/arizzi/cmssw/blob/vhbbHeppy722patch2/VHbbAnalysis/Heppy/test/crab/datasets.txt">Phys14</a> and signal productions ntuplized: </p>
+
+<ul>
+<li>TTBar (<span style="font-weight:bold;font-size:smaller;color:brown">TT_Tune4C_13TeV-pythia8-tauola</span>)</li>
+<li>ZJetsToNuNu (HT: <span style="font-weight:bold;font-size:smaller;color:brown">100to200, 200to400, 400to600, 600toInf</span>) </li>
+<li>WJetsToLNu (inclusive, HT: <span style="font-weight:bold;font-size:smaller;color:brown">100to200, 200to400, 400to600, 600toInf</span>)</li>
+<li>ZH_HToBB_ZToNuNu</li>
+<li>WH_HToBB_WToLNu</li>
+<li>QCD (HT: <span style="font-weight:bold;font-size:smaller;color:brown">100To250, 250To500, 500To1000, 1000ToInf</span>)</li>
+<li>Single Top (<span style="font-weight:bold;font-size:smaller;color:brown">T_t, Tbar_t, T_tW, Tbar_tW, T_s, Tbar_s</span>)</li>
+<li>mono-Higgs model with new scalar (<span style="font-weight:bold;font-size:smaller">\(m_{\chi} = 1~GeV\), \(m_{sc} = 100~GeV\), \(sin(\theta) = 0.3\)</span>)</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Selection</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Inspired by the <a href="http://dx.doi.org/10.1103/PhysRevD.89.012003">\(VH\)</a> analysis:</p>
+
+<ul>
+<li>\(E_{T}^{miss} > 150~GeV\)</li>
+<li>Higgs jets: \(p_{T} > 80, 30~GeV\), with tight and medium CSV tags (0.898, 0.679 discriminators)</li>
+<li>no isolated leptons with \(p_T > 20~GeV\)</li>
+<li>\(dR(bb)<1.3\) selects relatively boosted \(H\)</li>
+<li>\(|d\phi(E_{T}^{miss},\forall Jet)| < 1.5\) suppresses QCD</li>
+<li>no more that one additional jet with \(p_{T} > 30~GeV\) and \(|\eta| < 2.4\)</li>
+</ul>
+
+<p>\(H \rightarrow bb\) reconstruction options:</p>
+
+<ul>
+<li>jet pair with highest \(p_T\)</li>
+<li>jet pair with highest \(b\)-tag discriminators </li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-11" style="background:;">
+  <hgroup>
+    <h2>Higgs boson mass from the highest \(p_T\) jet pair</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <p><img class=center src="hmSelWide.svg" height=450></p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img class=center src="_hmAllSelWide.svg" height=450></p>
+
+</div>
+<div style='float:right;width:100%;'>
+  <p>A reasonable mass cut around \(\sim 90-140~GeV\) can suppress backgrounds by factor of 2</p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-12" style="background:;">
+  <hgroup>
+    <h2>Higgs boson mass from the jet pair with highest CSVs</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <p><img class=center src="_hmCSelWide.svg" height=450></p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img class=center src="_hmCAllSelWide.svg" height=450></p>
+
+</div>
+<div style='float:right;width:100%;'>
+  <p>Not much difference wrt. the previous slide \(\rightarrow\) use highest di-jet \(p_T\) selection by default</p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-13" style="background:;">
+  <hgroup>
+    <h2>\(E^{miss}_T\) and \(p^{higgs}_T\) distributions</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <p><img class=center src="metAllSelWide.svg" height=450></p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img class=center src="hptAllSelWide.svg" height=450></p>
+
+</div>
+<div style='float:right;width:100%;'>
+  <p>Main backgrounds are TTBar, ZJets, and WJets; signal yeild is 20-30% of Z(nn)H</p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-14" style="background:;">
+  <hgroup>
+    <h2>Discriminating power</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <p><img class=center src="_allVSsig.svg" height=450></p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img class=center src="ptAllVSsig.svg" height=450></p>
+
+</div>
+<div style='float:right;width:100%;'>
+  <p>Signal is slightly harder than the backgrounds</p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Summary</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Theory-wise mono-higgs scalar model seems to be a well-motivated scenario:</p>
+
+<ul>
+<li>it is a renormalizable way to extend the SM</li>
+<li>it couples DM with Higgs boson</li>
+</ul>
+
+<p>Analysis-wise the model seem a pretty challenging enterprise:</p>
+
+<ul>
+<li>signal yield is minuscule (20-30% of irreducible Z(nn)H that is not yet observed)</li>
+<li>kinematic spectra do not offer a very good discrimination</li>
+<li>the backgrounds have to be measured directly from data</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Motivation for the mono-higgs search'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Scalar model of the <a href="http://arxiv.org/abs/1312.2592">1312.2592</a>'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Observations on the model'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='The model parameters'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Mono-higgs diagrams and exclusive cross sections'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='Mono-higgs production cross section'>
+         6
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title='Phenomenological summary for the scalar model'>
+         7
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=8 title='Mono-higgs analysis strategy'>
+         8
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=9 title='Signal and backgrounds in full simulation'>
+         9
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=10 title='Selection'>
+         10
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=11 title='Higgs boson mass from the highest \(p_T\) jet pair'>
+         11
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=12 title='Higgs boson mass from the jet pair with highest CSVs'>
+         12
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=13 title='\(E^{miss}_T\) and \(p^{higgs}_T\) distributions'>
+         13
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=14 title='Discriminating power'>
+         14
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=15 title='Summary'>
+         15
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script> -->
+  <script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="../libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="../libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
