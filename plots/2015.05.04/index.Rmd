@@ -393,7 +393,7 @@ Main backgrounds are TTBar, ZJets, and WJets; signal yeild is 20-30% of Z(nn)H
 
 *** =left
 
-<img class=center src="_allVSsig.svg" height=450>
+<img class=center src="allVSsig.svg" height=450>
 
 *** =right
 
