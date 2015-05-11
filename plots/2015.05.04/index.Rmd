@@ -207,7 +207,7 @@ p2$show('inline')
 
 
 
-## Heavy dark matter ($m_h/2 < m_\chi < m_S/2$)
+## Heavy dark matter (<span style="font-weight:bold;font-size:smaller">$m_h/2 < m_\chi < m_S/2$</span>)
 
 Once Higgs no longer dominates production, the phenomenology becomes interesting:
 
