@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="../libraries/frameworks/io2012/css/default.css" media="all" >
   <link rel="stylesheet" href="../libraries/frameworks/io2012/css/phone.css" 
     media="only screen and (max-device-width: 480px)" >
-  <link rel="stylesheet" href="./slidify.css" >
+  <link rel="stylesheet" href="../libraries/frameworks/io2012/css/slidify.css" >
   <link rel="stylesheet" href="../libraries/highlighters/highlight.js/css/tomorrow.css" />
   <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="../libraries/widgets/nvd3/css/nv.d3.css"></link>
 <link rel=stylesheet href="../libraries/widgets/nvd3/css/rNVD3.css"></link>
@@ -42,6 +42,9 @@
     <h2></h2>
     <p>Khristian Kotov, Michele De Gruttola<br/></p>
   </hgroup>
+    <a href="https://github.com/kkotov/talks/zipball/gh-pages" class="example">
+     Download
+    </a>
   <article></article>  
 </slide>
     
@@ -213,11 +216,11 @@ and indirect <a href="http://dx.doi.org/10.1016/j.physletb.2014.06.077">(\(\math
 <li>\(m_\chi < \frac{m_h}{2}\): leading contribution comes from the diagram with \(h \rightarrow \bar{\chi}\chi~\) (\(\forall~m_S\))</li>
 </ul>
 
-<div id = 'chart1eed15a9be90' class = 'rChart polycharts'></div>
+<div id = 'chart9586f6a46f0' class = 'rChart polycharts'></div>
 
 <script type='text/javascript'>
     var chartParams = {
- "dom": "chart1eed15a9be90",
+ "dom": "chart9586f6a46f0",
 "width":    450,
 "height":    350,
 "layers": [
@@ -248,12 +251,12 @@ and indirect <a href="http://dx.doi.org/10.1016/j.physletb.2014.06.077">(\(\math
 },
 "coord": [],
 "title": "Cross section (pb)",
-"id": "chart1eed15a9be90" 
+"id": "chart9586f6a46f0" 
 }
     _.each(chartParams.layers, function(el){
         el.data = polyjs.data(el.data)
     })
-    var graph_chart1eed15a9be90 = polyjs.chart(chartParams);
+    var graph_chart9586f6a46f0 = polyjs.chart(chartParams);
 </script>
 
 </div>
@@ -262,11 +265,11 @@ and indirect <a href="http://dx.doi.org/10.1016/j.physletb.2014.06.077">(\(\math
 <li>\(\frac{m_h}{2} < m_\chi < \frac{m_S}{2}\): leading contribution is due to \(S \rightarrow \bar{\chi}\chi\) (assume \(m_S = 1~TeV\))</li>
 </ul>
 
-<div id = 'chart1eeda0c147e' class = 'rChart polycharts'></div>
+<div id = 'chart95823f9e2fd' class = 'rChart polycharts'></div>
 
 <script type='text/javascript'>
     var chartParams = {
- "dom": "chart1eeda0c147e",
+ "dom": "chart95823f9e2fd",
 "width":    450,
 "height":    350,
 "layers": [
@@ -297,17 +300,84 @@ and indirect <a href="http://dx.doi.org/10.1016/j.physletb.2014.06.077">(\(\math
 },
 "coord": [],
 "title": "Cross section (pb)",
-"id": "chart1eeda0c147e" 
+"id": "chart95823f9e2fd" 
 }
     _.each(chartParams.layers, function(el){
         el.data = polyjs.data(el.data)
     })
-    var graph_chart1eeda0c147e = polyjs.chart(chartParams);
+    var graph_chart95823f9e2fd = polyjs.chart(chartParams);
 </script>
 
 </div>
 <div style='float:right;width:100%;'>
   
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-7" style="background:;">
+  <hgroup>
+    <h2>Heavy dark matter (\(m_h/2 < m_\chi < m_S/2\))</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Once Higgs no longer dominates production, the phenomenology becomes interesting:</p>
+
+<div style='float:left;width:48%;' class='centered'>
+  <div id = 'chart9585bd3a0b7' class = 'rChart polycharts'></div>
+
+<script type='text/javascript'>
+    var chartParams = {
+ "dom": "chart9585bd3a0b7",
+"width":    450,
+"height":    350,
+"layers": [
+ {
+ "x": "mass",
+"y": "rate",
+"data": {
+ "mass": [    200,    200,    300,    300,    400,    400,    500,    500,    600,    600,    700,    700,    800,    800 ],
+"rate": [ 0.00622, 0.000498, 0.00513, 0.0012, 0.00366, 0.0015, 0.00292, 0.00166, 0.00255, 0.00174, 0.00235, 0.00173, 0.00224, 0.00168 ],
+"process": [ "invisible H", "mono-Higgs", "invisible H", "mono-Higgs", "invisible H", "mono-Higgs", "invisible H", "mono-Higgs", "invisible H", "mono-Higgs", "invisible H", "mono-Higgs", "invisible H", "mono-Higgs" ] 
+},
+"facet": null,
+"group": "process",
+"type": "point",
+"color": "process" 
+} 
+],
+"facet": [],
+"guides": {
+ "x": {
+ "min":    150,
+"max":    850,
+"numticks": 14,
+"labels": [    200,    200,    300,    300,    400,    400,    500,    500,    600,    600,    700,    700,    800,    800 ],
+"title": "m_scalar (GeV)" 
+},
+"y": {
+ "min": -0.0001,
+"max":  0.007 
+} 
+},
+"coord": [],
+"title": "Cross section (pb)",
+"id": "chart9585bd3a0b7" 
+}
+    _.each(chartParams.layers, function(el){
+        el.data = polyjs.data(el.data)
+    })
+    var graph_chart9585bd3a0b7 = polyjs.chart(chartParams);
+</script>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img class=center src="metSc.svg" height=400></p>
+
+</div>
+<div style='float:right;width:100%;'>
+  <p>Heavy mediator increases the cross section (note \(V^{cubic}\) in slide 3), but it is still \(\sim fb\)</p>
+
 </div>
   </article>
   <!-- Presenter Notes -->
@@ -439,7 +509,7 @@ and indirect <a href="http://dx.doi.org/10.1016/j.physletb.2014.06.077">(\(\math
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-11" style="background:;">
+<slide class="" id="slide-12" style="background:;">
   <hgroup>
     <h2>Higgs boson mass from the highest \(p_T\) jet pair</h2>
   </hgroup>
@@ -450,7 +520,7 @@ and indirect <a href="http://dx.doi.org/10.1016/j.physletb.2014.06.077">(\(\math
 
 </div>
 <div style='float:right;width:48%;'>
-  <p><img class=center src="hmAllSelWide.svg" height=450></p>
+  <p><img class=center src="_hmAllSelWide.svg" height=450></p>
 
 </div>
 <div style='float:right;width:100%;'>
@@ -461,18 +531,18 @@ and indirect <a href="http://dx.doi.org/10.1016/j.physletb.2014.06.077">(\(\math
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-12" style="background:;">
+<slide class="" id="slide-13" style="background:;">
   <hgroup>
     <h2>Higgs boson mass from the jet pair with highest CSVs</h2>
   </hgroup>
   <article data-timings="">
     
 <div style='float:left;width:48%;' class='centered'>
-  <p><img class=center src="hmCSelWide.svg" height=450></p>
+  <p><img class=center src="_hmCSelWide.svg" height=450></p>
 
 </div>
 <div style='float:right;width:48%;'>
-  <p><img class=center src="hmCAllSelWide.svg" height=450></p>
+  <p><img class=center src="_hmCAllSelWide.svg" height=450></p>
 
 </div>
 <div style='float:right;width:100%;'>
@@ -483,7 +553,7 @@ and indirect <a href="http://dx.doi.org/10.1016/j.physletb.2014.06.077">(\(\math
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-13" style="background:;">
+<slide class="" id="slide-14" style="background:;">
   <hgroup>
     <h2>\(E^{miss}_T\) and \(p^{higgs}_T\) distributions</h2>
   </hgroup>
@@ -505,14 +575,14 @@ and indirect <a href="http://dx.doi.org/10.1016/j.physletb.2014.06.077">(\(\math
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-14" style="background:;">
+<slide class="" id="slide-15" style="background:;">
   <hgroup>
     <h2>Discriminating power</h2>
   </hgroup>
   <article data-timings="">
     
 <div style='float:left;width:48%;' class='centered'>
-  <p><img class=center src="allVSsig.svg" height=450></p>
+  <p><img class=center src="_allVSsig.svg" height=450></p>
 
 </div>
 <div style='float:right;width:48%;'>
@@ -593,56 +663,62 @@ and indirect <a href="http://dx.doi.org/10.1016/j.physletb.2014.06.077">(\(\math
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=7 title='Phenomenological summary for the scalar model'>
+        data-slide=7 title='Heavy dark matter (\(m_h/2 < m_\chi < m_S/2\))'>
          7
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=8 title='Mono-higgs analysis strategy'>
+        data-slide=8 title='Phenomenological summary for the scalar model'>
          8
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=9 title='Signal and backgrounds in full simulation'>
+        data-slide=9 title='Mono-higgs analysis strategy'>
          9
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=10 title='Selection'>
+        data-slide=10 title='Signal and backgrounds in full simulation'>
          10
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=11 title='Higgs boson mass from the highest \(p_T\) jet pair'>
+        data-slide=11 title='Selection'>
          11
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=12 title='Higgs boson mass from the jet pair with highest CSVs'>
+        data-slide=12 title='Higgs boson mass from the highest \(p_T\) jet pair'>
          12
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=13 title='\(E^{miss}_T\) and \(p^{higgs}_T\) distributions'>
+        data-slide=13 title='Higgs boson mass from the jet pair with highest CSVs'>
          13
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=14 title='Discriminating power'>
+        data-slide=14 title='\(E^{miss}_T\) and \(p^{higgs}_T\) distributions'>
          14
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=15 title='Summary'>
+        data-slide=15 title='Discriminating power'>
          15
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=16 title='Summary'>
+         16
       </a>
     </li>
   </ul>
