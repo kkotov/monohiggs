@@ -346,7 +346,7 @@ $H \rightarrow bb$ reconstruction options:
 
 *** =right
 
-<img class=center src="_hmAllSelWide.svg" height=450>
+<img class=center src="hmAllSelWide.svg" height=450>
 
 *** =fullwidth
 
@@ -359,11 +359,11 @@ A reasonable mass cut around $\sim 90-140~GeV$ can suppress backgrounds by facto
 
 *** =left
 
-<img class=center src="_hmCSelWide.svg" height=450>
+<img class=center src="hmCSelWide.svg" height=450>
 
 *** =right
 
-<img class=center src="_hmCAllSelWide.svg" height=450>
+<img class=center src="hmCAllSelWide.svg" height=450>
 
 *** =fullwidth
 
