@@ -101,9 +101,9 @@ Parameters from 3 and 4 are trivial:
 
  * these parameters do not change kinematics
 
-Mono-higgs cross section: $\sigma(pp > h~ chi~ chi\tilde~ ) = 0.126~pb$ (independent on $m_S$)
+Mono-higgs cross section: $\sigma(pp > h~ chi~ chi\tilde~ ) = 0.126~pb$ (independent of $m_S$)
 
-Invisible cross section: $\sigma(pp~ >~ chi~ chi\tilde~ ) = 350~pb~$ (independent on $m_S$)
+Invisible cross section: $\sigma(pp~ >~ chi~ chi\tilde~ ) = 350~pb~$ (independent of $m_S$)
 
 --- &twocol
 

@@ -13,11 +13,10 @@
     media="only screen and (max-device-width: 480px)" >
   <link rel="stylesheet" href="../libraries/frameworks/io2012/css/slidify.css" >
   <link rel="stylesheet" href="../libraries/highlighters/highlight.js/css/tomorrow.css" />
-  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="../libraries/widgets/nvd3/css/nv.d3.css"></link>
-<link rel=stylesheet href="../libraries/widgets/nvd3/css/rNVD3.css"></link>
-
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  
   
-<script src="../libraries/widgets/polycharts/js/polychart2.standalone.js"></script>
+  <script src="../libraries/widgets/polycharts/js/polychart2.standalone.js"></script>
+
   <!-- Grab CDN jQuery, fall back to local if offline -->
   <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
   <script>window.jQuery || document.write('<script src="../libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
@@ -25,11 +24,6 @@
     src="../libraries/frameworks/io2012/js/require-1.0.8.min.js">
   </script>
   
-  <script src="../libraries/widgets/nvd3/js/jquery-1.8.2.min.js"></script>
-<script src="../libraries/widgets/nvd3/js/d3.v3.min.js"></script>
-<script src="../libraries/widgets/nvd3/js/nv.d3.min-new.js"></script>
-<script src="../libraries/widgets/nvd3/js/fisheye.js"></script>
-
 
 </head>
 <body style="opacity: 0">
@@ -42,9 +36,6 @@
     <h2></h2>
     <p>Khristian Kotov, Michele De Gruttola<br/></p>
   </hgroup>
-    <a href="https://github.com/kkotov/talks/zipball/gh-pages" class="example">
-     Download
-    </a>
   <article></article>  
 </slide>
     
@@ -161,9 +152,9 @@ and indirect <a href="http://dx.doi.org/10.1016/j.physletb.2014.06.077">(\(\math
 <li><p>these parameters do not change kinematics</p></li>
 </ul>
 
-<p>Mono-higgs cross section: \(\sigma(pp > h~ chi~ chi\tilde~ ) = 0.126~pb\) (independent on \(m_S\))</p>
+<p>Mono-higgs cross section: \(\sigma(pp > h~ chi~ chi\tilde~ ) = 0.126~pb\) (independent of \(m_S\))</p>
 
-<p>Invisible cross section: \(\sigma(pp~ >~ chi~ chi\tilde~ ) = 350~pb~\) (independent on \(m_S\))</p>
+<p>Invisible cross section: \(\sigma(pp~ >~ chi~ chi\tilde~ ) = 350~pb~\) (independent of \(m_S\))</p>
 
   </article>
   <!-- Presenter Notes -->
@@ -216,11 +207,11 @@ and indirect <a href="http://dx.doi.org/10.1016/j.physletb.2014.06.077">(\(\math
 <li>\(m_\chi < \frac{m_h}{2}\): leading contribution comes from the diagram with \(h \rightarrow \bar{\chi}\chi~\) (\(\forall~m_S\))</li>
 </ul>
 
-<div id = 'chart430c372121d9' class = 'rChart polycharts'></div>
+<div id = 'chart557460d978b8' class = 'rChart polycharts'></div>
 
 <script type='text/javascript'>
     var chartParams = {
- "dom": "chart430c372121d9",
+ "dom": "chart557460d978b8",
 "width":    450,
 "height":    350,
 "layers": [
@@ -251,12 +242,12 @@ and indirect <a href="http://dx.doi.org/10.1016/j.physletb.2014.06.077">(\(\math
 },
 "coord": [],
 "title": "Cross section (pb)",
-"id": "chart430c372121d9" 
+"id": "chart557460d978b8" 
 }
     _.each(chartParams.layers, function(el){
         el.data = polyjs.data(el.data)
     })
-    var graph_chart430c372121d9 = polyjs.chart(chartParams);
+    var graph_chart557460d978b8 = polyjs.chart(chartParams);
 </script>
 
 </div>
@@ -265,11 +256,11 @@ and indirect <a href="http://dx.doi.org/10.1016/j.physletb.2014.06.077">(\(\math
 <li>\(\frac{m_h}{2} < m_\chi < \frac{m_S}{2}\): leading contribution is due to \(S \rightarrow \bar{\chi}\chi\) (assume \(m_S = 1~TeV\))</li>
 </ul>
 
-<div id = 'chart430c2a879872' class = 'rChart polycharts'></div>
+<div id = 'chart557441ef83dd' class = 'rChart polycharts'></div>
 
 <script type='text/javascript'>
     var chartParams = {
- "dom": "chart430c2a879872",
+ "dom": "chart557441ef83dd",
 "width":    450,
 "height":    350,
 "layers": [
@@ -300,12 +291,12 @@ and indirect <a href="http://dx.doi.org/10.1016/j.physletb.2014.06.077">(\(\math
 },
 "coord": [],
 "title": "Cross section (pb)",
-"id": "chart430c2a879872" 
+"id": "chart557441ef83dd" 
 }
     _.each(chartParams.layers, function(el){
         el.data = polyjs.data(el.data)
     })
-    var graph_chart430c2a879872 = polyjs.chart(chartParams);
+    var graph_chart557441ef83dd = polyjs.chart(chartParams);
 </script>
 
 </div>
@@ -373,11 +364,11 @@ and indirect <a href="http://dx.doi.org/10.1016/j.physletb.2014.06.077">(\(\math
     <p>Once Higgs no longer dominates (e.g. for \(m_\chi = 75~GeV\)), phenomenology gets interesting:</p>
 
 <div style='float:left;width:48%;' class='centered'>
-  <div id = 'chart540c14b675e7' class = 'rChart polycharts'></div>
+  <div id = 'chart5574244a4e78' class = 'rChart polycharts'></div>
 
 <script type='text/javascript'>
     var chartParams = {
- "dom": "chart540c14b675e7",
+ "dom": "chart5574244a4e78",
 "width":    450,
 "height":    350,
 "layers": [
@@ -411,12 +402,12 @@ and indirect <a href="http://dx.doi.org/10.1016/j.physletb.2014.06.077">(\(\math
 },
 "coord": [],
 "title": "Cross section (pb)",
-"id": "chart540c14b675e7" 
+"id": "chart5574244a4e78" 
 }
     _.each(chartParams.layers, function(el){
         el.data = polyjs.data(el.data)
     })
-    var graph_chart540c14b675e7 = polyjs.chart(chartParams);
+    var graph_chart5574244a4e78 = polyjs.chart(chartParams);
 </script>
 
 </div>
