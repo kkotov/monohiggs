@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="../libraries/frameworks/io2012/css/default.css" media="all" >
   <link rel="stylesheet" href="../libraries/frameworks/io2012/css/phone.css" 
     media="only screen and (max-device-width: 480px)" >
-  <link rel="stylesheet" href="./slidify.css" >
+  <link rel="stylesheet" href="../libraries/frameworks/io2012/css/slidify.css" >
   <link rel="stylesheet" href="../libraries/highlighters/highlight.js/css/tomorrow.css" />
   <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="../libraries/widgets/nvd3/css/nv.d3.css"></link>
 <link rel=stylesheet href="../libraries/widgets/nvd3/css/rNVD3.css"></link>
@@ -42,6 +42,9 @@
     <h2></h2>
     <p>Khristian Kotov, Michele De Gruttola<br/></p>
   </hgroup>
+    <a href="https://github.com/kkotov/talks/zipball/gh-pages" class="example">
+     Download
+    </a>
   <article></article>  
 </slide>
     
@@ -123,7 +126,7 @@ and indirect <a href="http://dx.doi.org/10.1016/j.physletb.2014.06.077">(\(\math
 <li>Mixing generates Yukawa couplings for \(S\) and SM quarks thus giving us di-jet signature
 
 <ul>
-<li>the current <a href="http://dx.doi.org/10.1103/PhysRevD.91.052009">di-jet limits</a> also apply</li>
+<li>the current <a href="http://dx.doi.org/10.1103/PhysRevD.91.052009">di-jet limits</a> apply, although coupling \(\sim m_q/v\) render those irrelevant</li>
 </ul></li>
 </ul>
 
@@ -131,7 +134,7 @@ and indirect <a href="http://dx.doi.org/10.1016/j.physletb.2014.06.077">(\(\math
 
 <p>The interaction potential \(V^{cubic}\) also generates invisible \(H\) and mono-\(H\) signatures</p>
 
-<p>The mono-\(H\) contribution of \(V^{cubic}\) gains significance when \(~m_H < 2 m_\chi~\), but \(~2 m_\chi < m_S~\)</p>
+<p>The mono-\(H\) contribution of \(V^{cubic}\) gains significance if \(~m_H < 2 m_\chi~\), but \(~2 m_\chi < m_S~\)</p>
 
   </article>
   <!-- Presenter Notes -->
@@ -145,7 +148,7 @@ and indirect <a href="http://dx.doi.org/10.1016/j.physletb.2014.06.077">(\(\math
     <p>Let us start with the parameters from the original paper:</p>
 
 <ol>
-<li>Dark matter candidate mass: \(m_\chi = 1~GeV - 100~GeV\)</li>
+<li>Dark matter candidate mass: \(m_\chi = 1~GeV\)</li>
 <li>New scalar mediator mass: \(m_S = 100~GeV~(1000~GeV)\)</li>
 <li>Higgs-scalar mixing angle: \(sin(\theta) = 0.3~\) (still consistent with the current Higgs data)</li>
 <li>Higgs-scalar Yukawa coupling to DM: \(y_\chi = 0.5\)</li>
@@ -158,9 +161,9 @@ and indirect <a href="http://dx.doi.org/10.1016/j.physletb.2014.06.077">(\(\math
 <li><p>these parameters do not change kinematics</p></li>
 </ul>
 
-<p>Mono-higgs cross section: \(\sigma(pp > h~ chi~ chi\tilde~ ) = 0.126~pb\)</p>
+<p>Mono-higgs cross section: \(\sigma(pp > h~ chi~ chi\tilde~ ) = 0.126~pb\) (independent on \(m_S\))</p>
 
-<p>Invisible cross section: \(\sigma(pp~ >~ chi~ chi\tilde~ ) = 350~pb~\)</p>
+<p>Invisible cross section: \(\sigma(pp~ >~ chi~ chi\tilde~ ) = 350~pb~\) (independent on \(m_S\))</p>
 
   </article>
   <!-- Presenter Notes -->
@@ -213,11 +216,11 @@ and indirect <a href="http://dx.doi.org/10.1016/j.physletb.2014.06.077">(\(\math
 <li>\(m_\chi < \frac{m_h}{2}\): leading contribution comes from the diagram with \(h \rightarrow \bar{\chi}\chi~\) (\(\forall~m_S\))</li>
 </ul>
 
-<div id = 'chart9586f6a46f0' class = 'rChart polycharts'></div>
+<div id = 'chart430c372121d9' class = 'rChart polycharts'></div>
 
 <script type='text/javascript'>
     var chartParams = {
- "dom": "chart9586f6a46f0",
+ "dom": "chart430c372121d9",
 "width":    450,
 "height":    350,
 "layers": [
@@ -248,12 +251,12 @@ and indirect <a href="http://dx.doi.org/10.1016/j.physletb.2014.06.077">(\(\math
 },
 "coord": [],
 "title": "Cross section (pb)",
-"id": "chart9586f6a46f0" 
+"id": "chart430c372121d9" 
 }
     _.each(chartParams.layers, function(el){
         el.data = polyjs.data(el.data)
     })
-    var graph_chart9586f6a46f0 = polyjs.chart(chartParams);
+    var graph_chart430c372121d9 = polyjs.chart(chartParams);
 </script>
 
 </div>
@@ -262,11 +265,11 @@ and indirect <a href="http://dx.doi.org/10.1016/j.physletb.2014.06.077">(\(\math
 <li>\(\frac{m_h}{2} < m_\chi < \frac{m_S}{2}\): leading contribution is due to \(S \rightarrow \bar{\chi}\chi\) (assume \(m_S = 1~TeV\))</li>
 </ul>
 
-<div id = 'chart95823f9e2fd' class = 'rChart polycharts'></div>
+<div id = 'chart430c2a879872' class = 'rChart polycharts'></div>
 
 <script type='text/javascript'>
     var chartParams = {
- "dom": "chart95823f9e2fd",
+ "dom": "chart430c2a879872",
 "width":    450,
 "height":    350,
 "layers": [
@@ -297,12 +300,12 @@ and indirect <a href="http://dx.doi.org/10.1016/j.physletb.2014.06.077">(\(\math
 },
 "coord": [],
 "title": "Cross section (pb)",
-"id": "chart95823f9e2fd" 
+"id": "chart430c2a879872" 
 }
     _.each(chartParams.layers, function(el){
         el.data = polyjs.data(el.data)
     })
-    var graph_chart95823f9e2fd = polyjs.chart(chartParams);
+    var graph_chart430c2a879872 = polyjs.chart(chartParams);
 </script>
 
 </div>
@@ -315,17 +318,66 @@ and indirect <a href="http://dx.doi.org/10.1016/j.physletb.2014.06.077">(\(\math
 
 <slide class="" id="slide-7" style="background:;">
   <hgroup>
-    <h2>Heavy dark matter (<span style="font-weight:bold;font-size:smaller">\(m_h/2 < m_\chi < m_S/2\)</span>)</h2>
+    <h2>Light dark matter (<span style="font-weight:bold;font-size:smaller">\(m_\chi < m_h/2\)</span>)</h2>
   </hgroup>
   <article data-timings="">
-    <p>Once Higgs no longer dominates production, the phenomenology becomes interesting:</p>
+    <p><br></p>
+
+<p>Higgs boson serves a mediator and fully determines the decay kinematics</p>
+
+<p>Mono-jet event signature offers more power to constrain the model compared to mono-higgs:</p>
+
+<table><thead>
+<tr>
+<th>signature</th>
+<th>production rate</th>
+<th>current limit</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>mono-jet</td>
+<td>\(\sigma \times \epsilon(E_{T}^{miss} > 500~GeV) = 0.35~pb\)</td>
+<td><a href="http://arxiv.org/pdf/1408.3583v1.pdf#10">\(0.01~pb\)</a></td>
+</tr>
+<tr>
+<td>mono-higgs</td>
+<td>\(\sigma \times \epsilon(E_{T}^{miss} > 100~GeV) = 0.04~pb\)</td>
+<td>N/A</td>
+</tr>
+</tbody></table>
+
+<p><br></p>
+
+<p>The mono-jet and mono-Higgs cross sections are 100% correlated </p>
+
+<p>No model parameters make mono-Higgs signature more interesting than mono-jet signature </p>
 
 <div style='float:left;width:48%;' class='centered'>
-  <div id = 'chart9585bd3a0b7' class = 'rChart polycharts'></div>
+  
+</div>
+<div style='float:right;width:48%;'>
+  
+</div>
+<div style='float:right;width:100%;'>
+  
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-8" style="background:;">
+  <hgroup>
+    <h2>Heavier dark matter (<span style="font-weight:bold;font-size:smaller">\(m_h/2 < m_\chi < m_S/2\)</span>)</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Once Higgs no longer dominates (e.g. for \(m_\chi = 75~GeV\)), phenomenology gets interesting:</p>
+
+<div style='float:left;width:48%;' class='centered'>
+  <div id = 'chart540c14b675e7' class = 'rChart polycharts'></div>
 
 <script type='text/javascript'>
     var chartParams = {
- "dom": "chart9585bd3a0b7",
+ "dom": "chart540c14b675e7",
 "width":    450,
 "height":    350,
 "layers": [
@@ -335,7 +387,7 @@ and indirect <a href="http://dx.doi.org/10.1016/j.physletb.2014.06.077">(\(\math
 "data": {
  "mass": [    200,    200,    300,    300,    400,    400,    500,    500,    600,    600,    700,    700,    800,    800 ],
 "rate": [ 0.00622, 0.000498, 0.00513, 0.0012, 0.00366, 0.0015, 0.00292, 0.00166, 0.00255, 0.00174, 0.00235, 0.00173, 0.00224, 0.00168 ],
-"process": [ "invisible H", "mono-Higgs", "invisible H", "mono-Higgs", "invisible H", "mono-Higgs", "invisible H", "mono-Higgs", "invisible H", "mono-Higgs", "invisible H", "mono-Higgs", "invisible H", "mono-Higgs" ] 
+"process": [ "invisible", "mono-H", "invisible", "mono-H", "invisible", "mono-H", "invisible", "mono-H", "invisible", "mono-H", "invisible", "mono-H", "invisible", "mono-H" ] 
 },
 "facet": null,
 "group": "process",
@@ -359,12 +411,12 @@ and indirect <a href="http://dx.doi.org/10.1016/j.physletb.2014.06.077">(\(\math
 },
 "coord": [],
 "title": "Cross section (pb)",
-"id": "chart9585bd3a0b7" 
+"id": "chart540c14b675e7" 
 }
     _.each(chartParams.layers, function(el){
         el.data = polyjs.data(el.data)
     })
-    var graph_chart9585bd3a0b7 = polyjs.chart(chartParams);
+    var graph_chart540c14b675e7 = polyjs.chart(chartParams);
 </script>
 
 </div>
@@ -373,7 +425,7 @@ and indirect <a href="http://dx.doi.org/10.1016/j.physletb.2014.06.077">(\(\math
 
 </div>
 <div style='float:right;width:100%;'>
-  <p>Heavy mediator increases the cross section (note \(V^{cubic}\) in slide 3), but it is still \(\sim fb\)</p>
+  <p>Now the mono-\(H\) cross section depends on \(m_S\) (note \(V^{cubic}\) in slide 3), but it is still \(\sim fb\)</p>
 
 </div>
   </article>
@@ -399,26 +451,17 @@ and indirect <a href="http://dx.doi.org/10.1016/j.physletb.2014.06.077">(\(\math
 <li>\(\frac{m_h}{2} < m_\chi < \frac{m_S}{2}\): depends on \(~m_S~\)</li>
 </ul>
 
-<p>Mono-jet event signature offers more power to constrain the model compared to mono-higgs:</p>
+<p>Parameter space:</p>
 
-<table><thead>
-<tr>
-<th>signature</th>
-<th>production rate</th>
-<th>current limit</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>mono-jet</td>
-<td>\(\sigma \times \epsilon(E_{T}^{miss} > 500~GeV) = 0.35~pb\)</td>
-<td><a href="http://arxiv.org/pdf/1408.3583v1.pdf#10">\(0.01~pb\)</a></td>
-</tr>
-<tr>
-<td>mono-higgs</td>
-<td>\(\sigma \times \epsilon(E_{T}^{miss} > 100~GeV) = 0.04~pb\)</td>
-<td>N/A</td>
-</tr>
-</tbody></table>
+<ul>
+<li>\(m_\chi < \frac{m_h}{2}\) - ruled out by the current mono-jet search</li>
+<li>\(\frac{m_h}{2} < m_\chi < \frac{m_S}{2}\) - is of the main interest for us
+
+<ul>
+<li>\(m_\chi\) - does not change kinematics; pick any single value \(> m_h/2\)</li>
+<li>\(m_S\) - wide range is relevant (up to \(2~TeV\))</li>
+</ul></li>
+</ul>
 
   </article>
   <!-- Presenter Notes -->
@@ -506,7 +549,7 @@ and indirect <a href="http://dx.doi.org/10.1016/j.physletb.2014.06.077">(\(\math
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-12" style="background:;">
+<slide class="" id="slide-13" style="background:;">
   <hgroup>
     <h2>Higgs boson mass from the highest \(p_T\) jet pair</h2>
   </hgroup>
@@ -528,7 +571,7 @@ and indirect <a href="http://dx.doi.org/10.1016/j.physletb.2014.06.077">(\(\math
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-13" style="background:;">
+<slide class="" id="slide-14" style="background:;">
   <hgroup>
     <h2>Higgs boson mass from the jet pair with highest CSVs</h2>
   </hgroup>
@@ -550,7 +593,7 @@ and indirect <a href="http://dx.doi.org/10.1016/j.physletb.2014.06.077">(\(\math
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-14" style="background:;">
+<slide class="" id="slide-15" style="background:;">
   <hgroup>
     <h2>\(E^{miss}_T\) and \(p^{higgs}_T\) distributions</h2>
   </hgroup>
@@ -572,7 +615,7 @@ and indirect <a href="http://dx.doi.org/10.1016/j.physletb.2014.06.077">(\(\math
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-15" style="background:;">
+<slide class="" id="slide-16" style="background:;">
   <hgroup>
     <h2>Discriminating power</h2>
   </hgroup>
@@ -660,62 +703,68 @@ and indirect <a href="http://dx.doi.org/10.1016/j.physletb.2014.06.077">(\(\math
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=7 title='Heavy dark matter (<span style="font-weight:bold;font-size:smaller">\(m_h/2 < m_\chi < m_S/2\)</span>)'>
+        data-slide=7 title='Light dark matter (<span style="font-weight:bold;font-size:smaller">\(m_\chi < m_h/2\)</span>)'>
          7
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=8 title='Phenomenological summary for the scalar model'>
+        data-slide=8 title='Heavier dark matter (<span style="font-weight:bold;font-size:smaller">\(m_h/2 < m_\chi < m_S/2\)</span>)'>
          8
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=9 title='Mono-higgs analysis strategy'>
+        data-slide=9 title='Phenomenological summary for the scalar model'>
          9
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=10 title='Signal and backgrounds in full simulation'>
+        data-slide=10 title='Mono-higgs analysis strategy'>
          10
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=11 title='Selection'>
+        data-slide=11 title='Signal and backgrounds in full simulation'>
          11
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=12 title='Higgs boson mass from the highest \(p_T\) jet pair'>
+        data-slide=12 title='Selection'>
          12
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=13 title='Higgs boson mass from the jet pair with highest CSVs'>
+        data-slide=13 title='Higgs boson mass from the highest \(p_T\) jet pair'>
          13
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=14 title='\(E^{miss}_T\) and \(p^{higgs}_T\) distributions'>
+        data-slide=14 title='Higgs boson mass from the jet pair with highest CSVs'>
          14
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=15 title='Discriminating power'>
+        data-slide=15 title='\(E^{miss}_T\) and \(p^{higgs}_T\) distributions'>
          15
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=16 title='Summary'>
+        data-slide=16 title='Discriminating power'>
          16
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=17 title='Summary'>
+         17
       </a>
     </li>
   </ul>

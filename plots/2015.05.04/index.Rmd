@@ -74,13 +74,13 @@ The important physics phenomena come from the $H-S$ mixing alone:
 and indirect [($\mathcal{B}<0.38$)](http://dx.doi.org/10.1016/j.physletb.2014.06.077) bounds
   * it allows for the invisible $H$ + ISR jet (mono-jet) signature that is also rather [constrained](http://arxiv.org/pdf/1408.3583v1.pdf#10)
  * Mixing generates Yukawa couplings for $S$ and SM quarks thus giving us di-jet signature
-  * the current [di-jet limits](http://dx.doi.org/10.1103/PhysRevD.91.052009) also apply
+  * the current [di-jet limits](http://dx.doi.org/10.1103/PhysRevD.91.052009) apply, although coupling $\sim m_q/v$ render those irrelevant
 
 <br>
 
 The interaction potential $V^{cubic}$ also generates invisible $H$ and mono-$H$ signatures
 
-The mono-$H$ contribution of $V^{cubic}$ gains significance when $~m_H < 2 m_\chi~$, but $~2 m_\chi < m_S~$
+The mono-$H$ contribution of $V^{cubic}$ gains significance if $~m_H < 2 m_\chi~$, but $~2 m_\chi < m_S~$
 
 --- .class #id
 
@@ -90,7 +90,7 @@ The mono-$H$ contribution of $V^{cubic}$ gains significance when $~m_H < 2 m_\ch
 
 Let us start with the parameters from the original paper:
 
-1. Dark matter candidate mass: $m_\chi = 1~GeV - 100~GeV$
+1. Dark matter candidate mass: $m_\chi = 1~GeV$
 2. New scalar mediator mass: $m_S = 100~GeV~(1000~GeV)$
 3. Higgs-scalar mixing angle: $sin(\theta) = 0.3~$ (still consistent with the current Higgs data)
 4. Higgs-scalar Yukawa coupling to DM: $y_\chi = 0.5$
@@ -101,9 +101,9 @@ Parameters from 3 and 4 are trivial:
 
  * these parameters do not change kinematics
 
-Mono-higgs cross section: $\sigma(pp > h~ chi~ chi\tilde~ ) = 0.126~pb$
+Mono-higgs cross section: $\sigma(pp > h~ chi~ chi\tilde~ ) = 0.126~pb$ (independent on $m_S$)
 
-Invisible cross section: $\sigma(pp~ >~ chi~ chi\tilde~ ) = 350~pb~$
+Invisible cross section: $\sigma(pp~ >~ chi~ chi\tilde~ ) = 350~pb~$ (independent on $m_S$)
 
 --- &twocol
 
@@ -205,30 +205,51 @@ p2$show('inline')
 --- &twocol
 
 
+## Light dark matter (<span style="font-weight:bold;font-size:smaller">$m_\chi < m_h/2$</span>)
+
+<br>
+
+Higgs boson serves a mediator and fully determines the decay kinematics
+
+Mono-jet event signature offers more power to constrain the model compared to mono-higgs:
+
+signature   | production rate                                            | current limit
+------------|------------------------------------------------------------|--------------
+mono-jet    | $\sigma \times \epsilon(E_{T}^{miss} > 500~GeV) = 0.35~pb$ | [$0.01~pb$](http://arxiv.org/pdf/1408.3583v1.pdf#10)
+mono-higgs  | $\sigma \times \epsilon(E_{T}^{miss} > 100~GeV) = 0.04~pb$ | N/A
+
+<br>
+
+The mono-jet and mono-Higgs cross sections are 100% correlated 
+
+No model parameters make mono-Higgs signature more interesting than mono-jet signature 
+
+--- &twocol
 
 
-## Heavy dark matter (<span style="font-weight:bold;font-size:smaller">$m_h/2 < m_\chi < m_S/2$</span>)
 
-Once Higgs no longer dominates production, the phenomenology becomes interesting:
+## Heavier dark matter (<span style="font-weight:bold;font-size:smaller">$m_h/2 < m_\chi < m_S/2$</span>)
+
+Once Higgs no longer dominates (e.g. for $m_\chi = 75~GeV$), phenomenology gets interesting:
 
 *** =left
 
 ```{r results = 'asis', comment = NA, message = F, echo = F}
 r <- data.frame(mass=numeric(),rate=numeric(),process=character())
-r <- rbind(r, data.frame(mass=c(200), rate=c(0.00622), process='invisible H') )
-r <- rbind(r, data.frame(mass=c(200), rate=c(0.000498), process='mono-Higgs') )
-r <- rbind(r, data.frame(mass=c(300), rate=c(0.00513), process='invisible H') )
-r <- rbind(r, data.frame(mass=c(300), rate=c(0.0012), process='mono-Higgs') )
-r <- rbind(r, data.frame(mass=c(400), rate=c(0.00366), process='invisible H') )
-r <- rbind(r, data.frame(mass=c(400), rate=c(0.0015), process='mono-Higgs') )
-r <- rbind(r, data.frame(mass=c(500), rate=c(0.00292), process='invisible H') )
-r <- rbind(r, data.frame(mass=c(500), rate=c(0.00166), process='mono-Higgs') )
-r <- rbind(r, data.frame(mass=c(600), rate=c(0.00255), process='invisible H') )
-r <- rbind(r, data.frame(mass=c(600), rate=c(0.00174), process='mono-Higgs') )
-r <- rbind(r, data.frame(mass=c(700), rate=c(0.00235), process='invisible H') )
-r <- rbind(r, data.frame(mass=c(700), rate=c(0.00173), process='mono-Higgs') )
-r <- rbind(r, data.frame(mass=c(800), rate=c(0.00224), process='invisible H') )
-r <- rbind(r, data.frame(mass=c(800), rate=c(0.00168), process='mono-Higgs') )
+r <- rbind(r, data.frame(mass=c(200), rate=c(0.00622), process='invisible') )
+r <- rbind(r, data.frame(mass=c(200), rate=c(0.000498), process='mono-H') )
+r <- rbind(r, data.frame(mass=c(300), rate=c(0.00513), process='invisible') )
+r <- rbind(r, data.frame(mass=c(300), rate=c(0.0012), process='mono-H') )
+r <- rbind(r, data.frame(mass=c(400), rate=c(0.00366), process='invisible') )
+r <- rbind(r, data.frame(mass=c(400), rate=c(0.0015), process='mono-H') )
+r <- rbind(r, data.frame(mass=c(500), rate=c(0.00292), process='invisible') )
+r <- rbind(r, data.frame(mass=c(500), rate=c(0.00166), process='mono-H') )
+r <- rbind(r, data.frame(mass=c(600), rate=c(0.00255), process='invisible') )
+r <- rbind(r, data.frame(mass=c(600), rate=c(0.00174), process='mono-H') )
+r <- rbind(r, data.frame(mass=c(700), rate=c(0.00235), process='invisible') )
+r <- rbind(r, data.frame(mass=c(700), rate=c(0.00173), process='mono-H') )
+r <- rbind(r, data.frame(mass=c(800), rate=c(0.00224), process='invisible') )
+r <- rbind(r, data.frame(mass=c(800), rate=c(0.00168), process='mono-H') )
 p3<- rPlot(rate ~ mass, group=c('process'), data = r, type = 'point', color = 'process')
 p3$set(width  = 450)
 p3$set(height = 350)
@@ -255,8 +276,7 @@ p3$show('inline')
 
 *** =fullwidth
 
-Heavy mediator increases the cross section (note $V^{cubic}$ in slide 3), but it is still $\sim fb$
-
+Now the mono-$H$ cross section depends on $m_S$ (note $V^{cubic}$ in slide 3), but it is still $\sim fb$
 
 --- .class #id
 
@@ -272,13 +292,11 @@ The event kinematics of the mono-higgs and mono-jet processes:
  * $m_\chi < \frac{m_h}{2}$: independent of any model parameter
  * $\frac{m_h}{2} < m_\chi < \frac{m_S}{2}$: depends on $~m_S~$
 
-Mono-jet event signature offers more power to constrain the model compared to mono-higgs:
-
-signature   | production rate                                            | current limit
-------------|------------------------------------------------------------|--------------
-mono-jet    | $\sigma \times \epsilon(E_{T}^{miss} > 500~GeV) = 0.35~pb$ | [$0.01~pb$](http://arxiv.org/pdf/1408.3583v1.pdf#10)
-mono-higgs  | $\sigma \times \epsilon(E_{T}^{miss} > 100~GeV) = 0.04~pb$ | N/A
-
+Parameter space:
+ * $m_\chi < \frac{m_h}{2}$ - ruled out by the current mono-jet search
+ * $\frac{m_h}{2} < m_\chi < \frac{m_S}{2}$ - is of the main interest for us
+  * $m_\chi$ - does not change kinematics; pick any single value $> m_h/2$
+  * $m_S$ - wide range is relevant (up to $2~TeV$)
 
 --- .class #id
 
