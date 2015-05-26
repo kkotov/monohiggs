@@ -1,0 +1,326 @@
+---
+title       : "Mono-higgs"
+subtitle    : 
+author      : Khristian Kotov, Michele De Gruttola
+job         : 
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+github:
+  user: kkotov 
+  repo: talks
+url:
+  lib:    ../libraries
+  assets: ../assets
+widgets     : [mathjax]     # {mathjax, quiz, bootstrap}
+ext_widgets : {rCharts: [libraries/nvd3, libraries/polycharts]}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## Fixing a bug in my MadGraph calculations
+
+<br>
+
+Last week, [I mentioned](https://kkotov.github.io/monohiggs/plots/2015.05.19/#10) that I couldn't fully reproduce Fig.5 from [1312.2592](http://arxiv.org/abs/1312.2592).
+
+Anthony Paul Difranzo (one of the authors of 1312.2592) pointed to my problem:
+<span style="color:red">one cannot neglect change in width of $H$ due to the new $H\rightarrow\chi\bar{\chi}$ decay channel</span>:
+
+ * production cross section is a function of $\Gamma_{H}$
+ * SM Higgs boson is narrow: $\Gamma^{SM}_{H} \sim 5~MeV$
+ * mono-higgs model with default parameters gives $\Gamma_{H\rightarrow\chi\bar{\chi}} \sim 100~MeV$
+
+After accounting for this change:
+ * I can reproduce numbers in Fig.5 of the paper
+ * I have to change my conclusions from the last talk
+
+--- .class #id
+
+
+## The model parameters
+
+Parameters from the original paper:
+
+1. Dark matter candidate mass: $m_\chi = 1 - 1000~GeV$
+2. New scalar mediator mass: $m_S = 100~GeV~(1000~GeV)$
+3. Higgs-scalar mixing angle: $sin(\theta) = 0.3~$
+4. Higgs-scalar Yukawa coupling to DM: $y_\chi = 0.5$
+5. Coupling $b = 3~$ (is present only in $V^{cubic}$ term)
+
+<!--Calculated Higgs width at $m_\chi = 1~GeV~$ is $\sim 0.1~GeV~$ (dominated by the invisible decay)-->
+
+Take $y_\chi = 0.2~$ in order to have Higgs width within [the $\sim 22~MeV~$ LHC Run I constraint](http://dx.doi.org/10.1016/j.physletb.2014.06.077)
+ * $y_\chi$ does not change kinematics (neither do $sin(\theta)$ or $b$)
+ * $\Gamma_{H} = \Gamma_{H}^{SM} + \Gamma_{H \rightarrow \chi \bar{\chi}}$ and $\Gamma_{H \rightarrow \chi \bar{\chi}} \sim y^2_\chi~$ (as well as $\Gamma_S \sim \Gamma_{S \rightarrow \chi \bar{\chi}} \sim y^2_\chi$)
+ * for processes with $\chi\bar{\chi}~$: $\sigma_{\chi\bar{\chi}} \sim y_{\chi}^2 / \Gamma_{mediator}$ (i.e. cross section depends weakly on $y_{\chi}^2$)
+
+--- &twocol
+
+
+
+## Invisible DM production
+
+Even if $m_S \sim m_H~$, $\Gamma_S \gg \Gamma_H$ and $S$ is not interchangeable with $H$ for calculating $\sigma$
+
+Let us take $m_\chi = 1~GeV~$, $m_S = 100~GeV~$:
+
+*** =left
+
+<img class=center src=../2015.05.21/hcc.png height=200> 
+
+\[ \small \sigma(pp > h > chi~ chi\tilde~ ) \sim 84\% \]
+
+*** =right
+
+<img class=center src=../2015.05.21/scc.png height=200>
+
+\[ \small \sigma(pp > sc > h~ chi~ chi\tilde~ ) \sim 16\% \]
+
+*** =fullwidth
+
+Three kinematic regions:
+ * $m_\chi < \frac{m_h}{2}$: production is dominated by the Higgs boson invisible decay
+ * $\frac{m_h}{2} < m_\chi < \frac{m_S}{2}$: leading contribution is due to the off-shell $H$ and $S \rightarrow \bar{\chi}\chi$
+ * $m_\chi > max\{ \frac{m_h}{2}, \frac{m_S}{2} \}$: production is kinematically suppressed
+
+--- &twocol
+
+## Mono-higgs DM production without $\small V^{cubic}$
+
+Leading diagrams with $H \rightarrow \chi\bar{\chi}$ (left) and $S \rightarrow \chi\bar{\chi}$ (right) processes:
+
+*** =left
+
+<!-- generate g g > h > h chi chi~ HIW=0 QCD=0 QED=1 HIG=2 -->
+
+<img class=center src=../2015.05.21/h2h.png height=200> 
+
+<img class=center src=../2015.05.21/hh2h.png height=200>
+
+\[ \sigma \sim 3 \cdot 10^{-2}~pb~ (\sim 85\%) \]
+
+*** =right
+
+<!-- generate g g > sc > h chi chi~ HIW=0 QCD=0 QED=1 HIG=2 -->
+
+<img class=center src=../2015.05.21/h2sc.png height=200>
+
+<img class=center src=../2015.05.21/hh2sc.png height=200> 
+
+\[ \sigma \sim 5 \cdot 10^{-3}~pb~ (\sim 15\%) \]
+
+*** =fullwidth
+
+--- &twocol
+
+
+## Mono-higgs DM production from $\small V^{cubic}$ term
+
+*** =left
+
+<!-- generate g g > sc > h chi chi~ / chi chi~ HIW=0 QCD=0 QED=2 HIG=1 -->
+
+<img class=center src=../2015.05.21/shh.png height=200> 
+
+<img class=center src=../2015.05.21/hsh.png height=200>
+
+Independent of $b$, $\sigma \sim 2 \cdot 10^{-3}~pb$
+
+*** =right
+
+<!-- generate g g > sc > h chi chi~ / chi chi~ h HIW=0 QCD=0 QED=2 HIG=1 -->
+
+<img class=center src=../2015.05.21/ssh.png height=200>
+
+Depends on $b$, e.g. $\sigma(b = 3) \sim 3 \cdot 10^{-2}~pb$
+
+(may be comparable to $\sigma(non-V^{cubic})$)
+
+
+Each diagram on this slide has a coupling proportional to $m_S^2 ~\rightarrow~$
+for heavy $S$ they become very competitive
+
+*** =fullwidth
+
+--- .class #id
+
+## Production rate of light DM ($\small m_\chi < m_h/2$</span>)
+
+ * Mono-higgs cross section: $\sigma(pp > h~ chi~ chi\tilde~ ) = 0.03~pb~$ (new)
+ * Invisible cross section: $\sigma(pp~ >~ chi~ chi\tilde~ ) = 14.5~pb~$ (new)
+
+Ratio of the two is roughly independent on $m_\chi$
+
+<!--Leading contributions include $H \rightarrow \chi\bar{\chi}~$ process-->
+
+Mono-jet event signature is as powerful as mono-higgs for constraining the model:
+
+signature   | detection  rate                                             | current limit
+------------|-------------------------------------------------------------|--------------
+mono-jet    | $\sigma \times \epsilon(E_{T}^{miss} > 500~GeV) = 0.015~pb$ | [$0.01~pb$](http://arxiv.org/pdf/1408.3583v1.pdf#10)
+mono-higgs  | $\sigma \times \epsilon(E_{T}^{miss} > 100~GeV) = 0.01~pb$  | N/A
+
+<br>
+
+Kinematics changes (e.g. higher $E^{miss}_T$) once $V^{cubic}$ enters the game for heavy $S$
+
+If $m_S \sim m_H$, only $b \gtrsim 3$ handle increases rate of mono-higgs independently of mono-jet
+
+--- &twocol
+
+
+## Heavier dark matter ($\small m_h/2 < m_\chi < m_S/2$)
+
+*** =left
+
+<img class=center src="../2015.05.19/rates.png" height=400>
+
+*** =right
+
+<br><br>
+
+Production rate drops below interesting values ("shoulder" of <span style="color:pink">pink</span> curves in Fig.5 of [1312.2592](http://arxiv.org/abs/1312.2592))
+
+
+*** =fullwidth
+
+
+--- .class #id
+
+
+
+## Summary
+
+<br>
+
+After fixing the bug I came to a new set of different conclusions:
+
+* $m_\chi < m_h/2$ is an interesting part of the parameter space (not ruled out by mono-jet search)
+* mono-higgs signature is as powerful as mono-jet signature for limiting the model
+* an independent parameter $b$ can boost mono-higgs rate compared to the mono-jet rate
+
+<br>
+
+[$m_S$, $b$] - is a minimal set of parameters that leads to a non-trivial change of event kinematics
+
+--- .class #id
+
+## 
+
+<br><br><br>
+
+\[ \Large Backup \]
+
+--- .class #id
+
+
+## Reproducing the results
+
+<pre>
+wget http://launchpad.net/madgraph5/2.0/2.2.0/+download/MG5_aMC_v2.2.3.tar.gz
+cd MG5_aMC_v2_2_3/models/
+wget https://github.com/kkotov/monohiggs/raw/master/HmetUFOs.tar
+tar -xf HmetUFOs.tar
+cd ../
+edit models/Higgs_scalar_UFO/parameters.py
+# l31:  "value = 0.01," -> "value = 0.3,"
+# l231: "value = 50," -> "value = 1,"
+# l247: "value = 200," -> "value = 100,"
+./bin/mg
+import model Higgs_scalar_UFO
+compute_widths h --body_decay=2 --output=./param_card
+quit
+grep 'DECAY  25' param_card # new Higgs width in GeV
+./bin/mg
+compute_widths sc --body_decay=2 --output=./param_card
+grep 'DECAY  9000007' param_card # Scalar width in GeV
+</pre>
+
+
+--- .class #id
+
+
+## Reproducing the results (continued)
+
+<br>
+
+<pre>
+edit models/Higgs_scalar_UFO/parameters.py
+# l279: -> "value = 0.024,"
+# l287: -> "value = 0.146,"
+./bin/mg
+generate p p > h chi chi~
+output q
+launch -m
+</pre>
+
+--- .class #id
+
+
+## Motivation for the mono-higgs search
+
+<br>
+
+Experimentalist's view:
+
+ * Higgs boson is the least studied SM object that may show us an interesting behavior
+ * The $VH$ SM process has still [not yet been reliably observed](http://dx.doi.org/10.1103/PhysRevD.89.012003) (only $\sim 2 \sigma$ excess seen)
+ * The mono-$X$ signatures is a general approach to look for the Dark Matter at colliders
+
+<br>
+
+Theorist's view (in my view):
+
+ * Corrections to Higgs boson mass can be canceled by yet unknown (invisible) particles
+ * Higgs is perfect "hook" to introduce new fields with [renormalizable couplings](http://arxiv.org/pdf/hep-ph/0605188v1.pdf) to SM
+[[1](https://indico.cern.ch/event/349613/session/9/contribution/5/material/slides/0.pdf), 
+[2](http://arxiv.org/pdf/hep-ph/0612275v2.pdf), [3](http://en.wikipedia.org/wiki/Two-Higgs-doublet_model)]
+
+--- .class #id
+
+## Scalar model of the [1312.2592](http://arxiv.org/abs/1312.2592)
+
+Introduce Dark Matter $\chi$ coupled to a new scalar singlet $S$:
+
+\[ \mathcal{L} \sim -y_\chi \bar{\chi}\chi S \]
+
+$S$ can be introduced to the SM at the renormalizable level via interaction with the Higgs boson:
+
+\[ V \sim a |H|^2 S + b |H|^2 S^2 + \lambda_h |H|^4 = \frac{1}{2} a (h + v)^2 S + \frac{1}{2} b (h + v)^2 S^2 + \frac{\lambda_h}{4}(h+v)^4 \]
+
+Diagonalizing mass matrix via mixing $~~h \rightarrow c_\theta h + s_\theta S~~$  and  $~~S \rightarrow c_\theta S - s_\theta h~~$  gives us:
+
+\[ \mathcal{L} \sim -y_\chi \bar{\color{red}\chi}\color{red}\chi (c_\theta S - s_\theta \color{red}h) - \frac{m_q}{v}\bar{\color{brown}q}\color{brown}q(c_\theta h + s_\theta \color{brown}S) \]
+(note: we now have <span style="color:red">invisible higgs decay</span> and <span style="color:brown">Yukawa coupling of $S$ to SM</span>, suppressed by $s_\theta$)
+
+And an additional interaction terms (where $sin(\theta) \equiv s_\theta = 2 a v /(m^2_S - m^2_h)$):
+
+\[ V^{cubic} \approx \frac{sin(\theta)}{v} (2 m^2_h + m^2_S) h^2 S + \frac{m^2_S}{v} h S^2 + ... \]
+
+--- .class #id
+
+
+
+## Observations on the model
+
+The important physics phenomena come from the $H-S$ mixing alone:
+ * Mixing opens direct invisible Higgs boson decay channel (if $m_\chi < m_H/2$):
+  * should be consistent with direct [($\mathcal{B} < 0.6$)](http://dx.doi.org/10.1140/epjc/s10052-014-2980-6)
+and indirect [($\mathcal{B}<0.38$)](http://dx.doi.org/10.1016/j.physletb.2014.06.077) bounds
+  * allows for the invisible $H$ + ISR jet (mono-jet) signature that is rather [constrained](http://arxiv.org/pdf/1408.3583v1.pdf#10)
+ * Mixing generates Yukawa couplings for $S$ and SM quarks thus producing di-quark decays
+  * for light quarks the $\sim m_q/v$ coupling makes the current [di-jet limits](http://dx.doi.org/10.1103/PhysRevD.91.052009) irrelevant
+  * [$t\bar{t}$ resonance](http://dx.doi.org/10.1103/PhysRevLett.111.211804) search is also not sufficiently sensitive to constrain the model
+
+<br>
+
+Potential $V^{cubic}$ generates invisible $H$ and mono-$H$ signatures as well
+
+
+
+--- .class #id
+
+
+
+
