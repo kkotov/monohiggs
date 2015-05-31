@@ -13,11 +13,8 @@
     media="only screen and (max-device-width: 480px)" >
   <link rel="stylesheet" href="../2015.05.04/slidify.css" >
   <link rel="stylesheet" href="../libraries/highlighters/highlight.js/css/tomorrow.css" />
-  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="../libraries/widgets/nvd3/css/nv.d3.css"></link>
-<link rel=stylesheet href="../libraries/widgets/nvd3/css/rNVD3.css"></link>
-
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  
   
-<script src="../libraries/widgets/polycharts/js/polychart2.standalone.js"></script>
   <!-- Grab CDN jQuery, fall back to local if offline -->
   <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
   <script>window.jQuery || document.write('<script src="../libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
@@ -25,11 +22,7 @@
     src="../libraries/frameworks/io2012/js/require-1.0.8.min.js">
   </script>
   
-  <script src="../libraries/widgets/nvd3/js/jquery-1.8.2.min.js"></script>
-<script src="../libraries/widgets/nvd3/js/d3.v3.min.js"></script>
-<script src="../libraries/widgets/nvd3/js/nv.d3.min-new.js"></script>
-<script src="../libraries/widgets/nvd3/js/fisheye.js"></script>
-
+  
 
 </head>
 <body style="opacity: 0">
@@ -128,9 +121,12 @@ and indirect <a href="http://dx.doi.org/10.1016/j.physletb.2014.06.077">(\(\math
 
 <p><br></p>
 
-<p>Potential \(V^{cubic}\) generates invisible \(H\) and mono-\(H\) signatures as well</p>
+<p>There are two simultaneous mechanisms of the DM production:</p>
 
-<p>The mono-\(H\) contribution of \(V^{cubic}\) gains significance if \(~m_\chi > m_H / 2~\), but \(~m_\chi < m_S / 2~\)</p>
+<ul>
+<li>\(H-S\) mixing </li>
+<li>\(V^{cubic}\) potential </li>
+</ul>
 
   </article>
   <!-- Presenter Notes -->
@@ -156,7 +152,7 @@ and indirect <a href="http://dx.doi.org/10.1016/j.physletb.2014.06.077">(\(\math
 <p>Take \(y_\chi = 0.2~\) in order to have Higgs width within <a href="http://dx.doi.org/10.1016/j.physletb.2014.06.077">the \(\sim 22~MeV~\) LHC Run I constraint</a></p>
 
 <ul>
-<li>\(y_\chi\) does not change kinematics (neither do \(sin(\theta)\) or \(b\))</li>
+<li>\(y_\chi\) does not change kinematics</li>
 <li>\(\Gamma_{H} = \Gamma_{H}^{SM} + \Gamma_{H \rightarrow \chi \bar{\chi}}\) and \(\Gamma_{H \rightarrow \chi \bar{\chi}} \sim y^2_\chi~\) (as well as \(\Gamma_S \sim \Gamma_{S \rightarrow \chi \bar{\chi}} \sim y^2_\chi\))</li>
 <li>for processes with \(\chi\bar{\chi}~\): \(\sigma_{\chi\bar{\chi}} \sim y_{\chi}^2 / \Gamma_{mediator}\) (i.e. cross section depends weakly on \(y_{\chi}^2\))</li>
 </ul>
@@ -191,7 +187,7 @@ and indirect <a href="http://dx.doi.org/10.1016/j.physletb.2014.06.077">(\(\math
 
 <ul>
 <li>\(m_\chi < \frac{m_h}{2}\): production is dominated by the Higgs boson invisible decay</li>
-<li>\(\frac{m_h}{2} < m_\chi < \frac{m_S}{2}\): leading contribution is due to \(S \rightarrow \bar{\chi}\chi\)</li>
+<li>\(\frac{m_h}{2} < m_\chi < \frac{m_S}{2}\): leading contribution is due to the off-shell \(H\) and \(S \rightarrow \bar{\chi}\chi\)</li>
 <li>\(m_\chi > max\{ \frac{m_h}{2}, \frac{m_S}{2} \}\): production is kinematically suppressed</li>
 </ul>
 
@@ -222,7 +218,7 @@ and indirect <a href="http://dx.doi.org/10.1016/j.physletb.2014.06.077">(\(\math
 
 <p><img class=center src=../2015.05.21/h2sc.png height=200></p>
 
-<p><img class=center src=../2015.05.21/h2sc.png height=200> </p>
+<p><img class=center src=../2015.05.21/hh2sc.png height=200> </p>
 
 <p>\[ \sigma \sim 5 \cdot 10^{-3}~pb~ (\sim 15\%) \]</p>
 
@@ -236,7 +232,7 @@ and indirect <a href="http://dx.doi.org/10.1016/j.physletb.2014.06.077">(\(\math
 
 <slide class="" id="slide-7" style="background:;">
   <hgroup>
-    <h2>Mono-higgs DM production from \(\small V^{cubic}\) term</h2>
+    <h2>Mono-higgs DM production from \(\small V^{cubic}\)</h2>
   </hgroup>
   <article data-timings="">
     
@@ -272,7 +268,7 @@ for heavy \(S\) they become very competitive</p>
 
 <slide class="class" id="id" style="background:;">
   <hgroup>
-    <h2>Production rate of light DM (\(\small m_\chi < m_h/2\)</span>)</h2>
+    <h2>Production rate of light DM (\(\tiny m_\chi < m_h/2\)</span>)</h2>
   </hgroup>
   <article data-timings="">
     <ul>
@@ -317,7 +313,7 @@ for heavy \(S\) they become very competitive</p>
 
 <slide class="" id="slide-9" style="background:;">
   <hgroup>
-    <h2>Heavier dark matter (\(\small m_h/2 < m_\chi < m_S/2\))</h2>
+    <h2>Heavier dark matter (\(\tiny m_h/2 < m_\chi < m_S/2\))</h2>
   </hgroup>
   <article data-timings="">
     
@@ -364,6 +360,84 @@ for heavy \(S\) they become very competitive</p>
 <ul>
 <li>MSSM Higgs sector is the 2HDM</li>
 </ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Summary</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><br></p>
+
+<ul>
+<li>The model is not ruled out by mono-jet or other searches</li>
+<li>[\(m_S\), \(b\)] is a minimal parameter set examining different event kinematics</li>
+<li>for \(m_\chi < m_h/2\), the model is nearly agnostic to \(m_\chi\)</li>
+<li>if \(m_\chi > m_h/2\) production rate is rather suppressed</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <article data-timings="">
+    <p><br><br><br></p>
+
+<p>\[ \Large Backup \]</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Reproducing the results</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre>
+wget http://launchpad.net/madgraph5/2.0/2.2.0/+download/MG5_aMC_v2.2.3.tar.gz
+cd MG5_aMC_v2_2_3/models/
+wget https://github.com/kkotov/monohiggs/raw/master/HmetUFOs.tar
+tar -xf HmetUFOs.tar
+cd ../
+edit models/Higgs_scalar_UFO/parameters.py
+# l31:  "value = 0.01," -> "value = 0.3,"
+# l231: "value = 50," -> "value = 1,"
+# l247: "value = 200," -> "value = 100,"
+./bin/mg
+import model Higgs_scalar_UFO
+compute_widths h --body_decay=2 --output=./param_card
+quit
+grep 'DECAY  25' param_card # new Higgs width in GeV
+./bin/mg
+compute_widths sc --body_decay=2 --output=./param_card
+grep 'DECAY  9000007' param_card # Scalar width in GeV
+</pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Reproducing the results (continued)</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><br></p>
+
+<pre>
+edit models/Higgs_scalar_UFO/parameters.py
+# l279: -> "value = 0.024,"
+# l287: -> "value = 0.146,"
+./bin/mg
+generate p p > h chi chi~
+output q
+launch -m
+</pre>
 
   </article>
   <!-- Presenter Notes -->
@@ -451,7 +525,7 @@ for heavy \(S\) they become very competitive</p>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-14" style="background:;">
+<slide class="" id="slide-18" style="background:;">
   <hgroup>
     <h2>Higgs boson mass from the highest \(p_T\) jet pair</h2>
   </hgroup>
@@ -473,7 +547,7 @@ for heavy \(S\) they become very competitive</p>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-15" style="background:;">
+<slide class="" id="slide-19" style="background:;">
   <hgroup>
     <h2>Higgs boson mass from the jet pair with highest CSVs</h2>
   </hgroup>
@@ -495,7 +569,7 @@ for heavy \(S\) they become very competitive</p>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-16" style="background:;">
+<slide class="" id="slide-20" style="background:;">
   <hgroup>
     <h2>\(E^{miss}_T\) and \(p^{higgs}_T\) distributions</h2>
   </hgroup>
@@ -581,19 +655,19 @@ for heavy \(S\) they become very competitive</p>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=7 title='Mono-higgs DM production from \(\small V^{cubic}\) term'>
+        data-slide=7 title='Mono-higgs DM production from \(\small V^{cubic}\)'>
          7
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=8 title='Production rate of light DM (\(\small m_\chi < m_h/2\)</span>)'>
+        data-slide=8 title='Production rate of light DM (\(\tiny m_\chi < m_h/2\)</span>)'>
          8
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=9 title='Heavier dark matter (\(\small m_h/2 < m_\chi < m_S/2\))'>
+        data-slide=9 title='Heavier dark matter (\(\tiny m_h/2 < m_\chi < m_S/2\))'>
          9
       </a>
     </li>
@@ -605,44 +679,68 @@ for heavy \(S\) they become very competitive</p>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=11 title='Mono-higgs analysis strategy'>
+        data-slide=11 title='Summary'>
          11
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=12 title='Signal and backgrounds in full simulation'>
+        data-slide=12 title=''>
          12
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=13 title='Selection'>
+        data-slide=13 title='Reproducing the results'>
          13
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=14 title='Higgs boson mass from the highest \(p_T\) jet pair'>
+        data-slide=14 title='Reproducing the results (continued)'>
          14
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=15 title='Higgs boson mass from the jet pair with highest CSVs'>
+        data-slide=15 title='Mono-higgs analysis strategy'>
          15
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=16 title='\(E^{miss}_T\) and \(p^{higgs}_T\) distributions'>
+        data-slide=16 title='Signal and backgrounds in full simulation'>
          16
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=17 title='Summary'>
+        data-slide=17 title='Selection'>
          17
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=18 title='Higgs boson mass from the highest \(p_T\) jet pair'>
+         18
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=19 title='Higgs boson mass from the jet pair with highest CSVs'>
+         19
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=20 title='\(E^{miss}_T\) and \(p^{higgs}_T\) distributions'>
+         20
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=21 title='Summary'>
+         21
       </a>
     </li>
   </ul>

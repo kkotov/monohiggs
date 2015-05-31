@@ -51,7 +51,7 @@ Parameters from the original paper:
 <!--Calculated Higgs width at $m_\chi = 1~GeV~$ is $\sim 0.1~GeV~$ (dominated by the invisible decay)-->
 
 Take $y_\chi = 0.2~$ in order to have Higgs width within [the $\sim 22~MeV~$ LHC Run I constraint](http://dx.doi.org/10.1016/j.physletb.2014.06.077)
- * $y_\chi$ does not change kinematics (neither do $sin(\theta)$ or $b$)
+ * $y_\chi$ does not change kinematics
  * $\Gamma_{H} = \Gamma_{H}^{SM} + \Gamma_{H \rightarrow \chi \bar{\chi}}$ and $\Gamma_{H \rightarrow \chi \bar{\chi}} \sim y^2_\chi~$ (as well as $\Gamma_S \sim \Gamma_{S \rightarrow \chi \bar{\chi}} \sim y^2_\chi$)
  * for processes with $\chi\bar{\chi}~$: $\sigma_{\chi\bar{\chi}} \sim y_{\chi}^2 / \Gamma_{mediator}$ (i.e. cross section depends weakly on $y_{\chi}^2$)
 

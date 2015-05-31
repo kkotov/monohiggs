@@ -13,7 +13,6 @@ url:
   lib:    ../libraries
   assets: ../assets
 widgets     : [mathjax]     # {mathjax, quiz, bootstrap}
-ext_widgets : {rCharts: [libraries/nvd3, libraries/polycharts]}
 mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 ---
@@ -77,9 +76,9 @@ and indirect [($\mathcal{B}<0.38$)](http://dx.doi.org/10.1016/j.physletb.2014.06
 
 <br>
 
-Potential $V^{cubic}$ generates invisible $H$ and mono-$H$ signatures as well
-
-The mono-$H$ contribution of $V^{cubic}$ gains significance if $~m_\chi > m_H / 2~$, but $~m_\chi < m_S / 2~$
+There are two simultaneous mechanisms of the DM production:
+ * $H-S$ mixing 
+ * $V^{cubic}$ potential 
 
 --- .class #id
 
@@ -97,7 +96,7 @@ Parameters from the original paper:
 <!--Calculated Higgs width at $m_\chi = 1~GeV~$ is $\sim 0.1~GeV~$ (dominated by the invisible decay)-->
 
 Take $y_\chi = 0.2~$ in order to have Higgs width within [the $\sim 22~MeV~$ LHC Run I constraint](http://dx.doi.org/10.1016/j.physletb.2014.06.077)
- * $y_\chi$ does not change kinematics (neither do $sin(\theta)$ or $b$)
+ * $y_\chi$ does not change kinematics
  * $\Gamma_{H} = \Gamma_{H}^{SM} + \Gamma_{H \rightarrow \chi \bar{\chi}}$ and $\Gamma_{H \rightarrow \chi \bar{\chi}} \sim y^2_\chi~$ (as well as $\Gamma_S \sim \Gamma_{S \rightarrow \chi \bar{\chi}} \sim y^2_\chi$)
  * for processes with $\chi\bar{\chi}~$: $\sigma_{\chi\bar{\chi}} \sim y_{\chi}^2 / \Gamma_{mediator}$ (i.e. cross section depends weakly on $y_{\chi}^2$)
 
@@ -127,7 +126,7 @@ Let us take $m_\chi = 1~GeV~$, $m_S = 100~GeV~$:
 
 Three kinematic regions:
  * $m_\chi < \frac{m_h}{2}$: production is dominated by the Higgs boson invisible decay
- * $\frac{m_h}{2} < m_\chi < \frac{m_S}{2}$: leading contribution is due to $S \rightarrow \bar{\chi}\chi$
+ * $\frac{m_h}{2} < m_\chi < \frac{m_S}{2}$: leading contribution is due to the off-shell $H$ and $S \rightarrow \bar{\chi}\chi$
  * $m_\chi > max\{ \frac{m_h}{2}, \frac{m_S}{2} \}$: production is kinematically suppressed
 
 --- &twocol
@@ -152,7 +151,7 @@ Leading diagrams with $H \rightarrow \chi\bar{\chi}$ (left) and $S \rightarrow \
 
 <img class=center src=../2015.05.21/h2sc.png height=200>
 
-<img class=center src=../2015.05.21/h2sc.png height=200> 
+<img class=center src=../2015.05.21/hh2sc.png height=200> 
 
 \[ \sigma \sim 5 \cdot 10^{-3}~pb~ (\sim 15\%) \]
 
@@ -161,7 +160,7 @@ Leading diagrams with $H \rightarrow \chi\bar{\chi}$ (left) and $S \rightarrow \
 --- &twocol
 
 
-## Mono-higgs DM production from $\small V^{cubic}$ term
+## Mono-higgs DM production from $\small V^{cubic}$
 
 *** =left
 
@@ -191,7 +190,7 @@ for heavy $S$ they become very competitive
 
 --- .class #id
 
-## Production rate of light DM ($\small m_\chi < m_h/2$</span>)
+## Production rate of light DM ($\tiny m_\chi < m_h/2$</span>)
 
  * Mono-higgs cross section: $\sigma(pp > h~ chi~ chi\tilde~ ) = 0.03~pb$
  * Invisible cross section: $\sigma(pp~ >~ chi~ chi\tilde~ ) = 14.5~pb~$
@@ -217,7 +216,7 @@ If $m_S \sim m_H$, only $b \gtrsim 3$ handle increases rate of mono-higgs indepe
 
 
 
-## Heavier dark matter ($\small m_h/2 < m_\chi < m_S/2$)
+## Heavier dark matter ($\tiny m_h/2 < m_\chi < m_S/2$)
 
 *** =left
 
@@ -264,6 +263,72 @@ Vector models of the [1312.2592](http://arxiv.org/abs/1312.2592):
  * MSSM Higgs sector is the 2HDM
 
 --- .class #id
+
+
+## Summary
+
+<br>
+
+* The model is not ruled out by mono-jet or other searches
+* [$m_S$, $b$] is a minimal parameter set examining different event kinematics
+* for $m_\chi < m_h/2$, the model is nearly agnostic to $m_\chi$
+* if $m_\chi > m_h/2$ production rate is rather suppressed
+
+--- .class #id
+
+## 
+
+<br><br><br>
+
+\[ \Large Backup \]
+
+--- .class #id
+
+
+## Reproducing the results
+
+<pre>
+wget http://launchpad.net/madgraph5/2.0/2.2.0/+download/MG5_aMC_v2.2.3.tar.gz
+cd MG5_aMC_v2_2_3/models/
+wget https://github.com/kkotov/monohiggs/raw/master/HmetUFOs.tar
+tar -xf HmetUFOs.tar
+cd ../
+edit models/Higgs_scalar_UFO/parameters.py
+# l31:  "value = 0.01," -> "value = 0.3,"
+# l231: "value = 50," -> "value = 1,"
+# l247: "value = 200," -> "value = 100,"
+./bin/mg
+import model Higgs_scalar_UFO
+compute_widths h --body_decay=2 --output=./param_card
+quit
+grep 'DECAY  25' param_card # new Higgs width in GeV
+./bin/mg
+compute_widths sc --body_decay=2 --output=./param_card
+grep 'DECAY  9000007' param_card # Scalar width in GeV
+</pre>
+
+
+--- .class #id
+
+
+## Reproducing the results (continued)
+
+<br>
+
+<pre>
+edit models/Higgs_scalar_UFO/parameters.py
+# l279: -> "value = 0.024,"
+# l287: -> "value = 0.146,"
+./bin/mg
+generate p p > h chi chi~
+output q
+launch -m
+</pre>
+
+--- .class #id
+
+
+
 
 ## Mono-higgs analysis strategy
 
